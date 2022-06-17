@@ -18,10 +18,10 @@ namespace ViewWPF.Views
 
         Usuario u = new Usuario();
 
-        private void btnLogar_Click(object sender, RoutedEventArgs e)
+        private void PrzyciskZaloguj_Click(object sender, RoutedEventArgs e)
         {
             u = new Usuario();
-            u = UsuarioDAO.BuscarUsuarioPorLogin2(txtLogin.Text);
+            u = UsuarioDAO.BuscarUsuarioPorLogin2(tLogin.Text);
             Program.Batatinha = u.Id;
 
             if (u != null && TestarSenha(u.Senha))
@@ -39,14 +39,14 @@ namespace ViewWPF.Views
 
         private bool TestarSenha(String senha)
         {
-            if (senha.Equals(txtSenha.Password.ToString()))
+            if (senha.Equals(tHaslo.Password.ToString()))
             {
                 return true;
             }
             return false;
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        private void PrzyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
             CadastrodeUsuario cu = new CadastrodeUsuario();
             cu.Show();

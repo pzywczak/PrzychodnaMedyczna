@@ -21,13 +21,13 @@
             Grid.Column="1"
             Grid.Row="1"
             VerticalAlignment="Center">
-            <Image x:Name="imgBatman" Source="/ViewWPF;component/Images/batman2.png" Height="55" Margin="38,0,37,0" />
+            <Image x:Name="imgBatman" Source="/ViewWPF;component/Images/medical-g3be956076_1280.png" Height="55" Margin="38,0,37,0" />
             <TextBlock x:Name="lblLogin" Text="Login" />
-            <TextBox x:Name="txtLogin"/>
-            <TextBlock x:Name="lblSenha" Text="Senha"/>
-            <PasswordBox x:Name="txtSenha"/>
-            <Button x:Name="btnLogar" Content="Entrar" Click="btnLogar_Click" HorizontalAlignment="Right" Width="146"/>
+            <TextBox x:Name="tLogin"/>
+            <TextBlock x:Name="hHaslo" Text="Haslo"/>
+            <PasswordBox x:Name="tHaslo"/>
+            <Button x:Name="PrzyciskZaloguj" Content="Zaloguj sie" Click="PrzyciskZaloguj_Click" HorizontalAlignment="Right" Width="146"/>
         </StackPanel>
-        <Button x:Name="btnAdd" Content="Add User" Grid.Row="2" VerticalAlignment="Top" Click="btnAdd_Click"/>
+        <Button x:Name="PrzyciskDodaj" Content="Dodaj Uzytkownika" Grid.Row="2" VerticalAlignment="Top" Click="PrzyciskDodaj_Click"/>
     </Grid>
 </Window>

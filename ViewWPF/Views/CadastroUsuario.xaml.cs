@@ -30,14 +30,14 @@ namespace ViewWPF.Views
 
         private void btnGravar_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtLogin.Text) && !string.IsNullOrEmpty(txtSenha.Text))
+            if (!string.IsNullOrEmpty(tLogin.Text) && !string.IsNullOrEmpty(tHaslo.Text))
             {
                 if (TestarSenha())
                 {
                     u = new Usuario()
                     {
-                        Login = txtLogin.Text,
-                        Senha = txtSenha.Text,
+                        Login = tLogin.Text,
+                        Senha = tHaslo.Text,
                     };
                     if (UsuarioDAO.SalvarUsuario(u))
                     {
@@ -76,7 +76,7 @@ namespace ViewWPF.Views
 
         public bool TestarSenha()
         {
-            if (txtSenha.Text == txtConfirmSenha.Text)
+            if (tHaslo.Text == txtConfirmSenha.Text)
             {
                 return true;
             }
@@ -85,10 +85,10 @@ namespace ViewWPF.Views
 
         public void LimparCampos()
         {
-            txtLogin.Clear();
-            txtSenha.Clear();
+            tLogin.Clear();
+            tHaslo.Clear();
             txtConfirmSenha.Clear();
-            txtLogin.Focus();
+            tLogin.Focus();
         }
     }
 }
