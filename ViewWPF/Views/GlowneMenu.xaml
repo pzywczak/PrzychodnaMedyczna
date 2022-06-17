@@ -29,7 +29,7 @@
             </MenuItem>
             <MenuItem Header="Lista" Width="90" FontWeight="Black" Background="#FF0066CC" Foreground="White">
                 <MenuItem x:Name="ListaLekarzy" Header="Lekarzy" HorizontalAlignment="Left" Width="150" Background="#FF0066CC" Click="ListaLekarzy_Click"/>
-                <MenuItem x:Name="ListaPacjentow" Header="Pacjentow" HorizontalAlignment="Left" Width="150" Background="#FF0066CC" Click="ListPacientes_Click"/>
+                <MenuItem x:Name="ListaPacjentow" Header="Pacjentow" HorizontalAlignment="Left" Width="150" Background="#FF0066CC" Click="ListaPacjentow_Click"/>
             </MenuItem>
         </Menu>
         <Image HorizontalAlignment="Left" Height="197" Margin="50,63,0,0" VerticalAlignment="Top" Width="234" Source="/ViewWPF;component/Images/medical-g3be956076_1280.png"/>
