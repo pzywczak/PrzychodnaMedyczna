@@ -45,7 +45,7 @@ namespace ViewWPF.Views
 
         private void cadastrarUsuario_Click(object sender, RoutedEventArgs e)
         {
-            CadastrodeUsuario cu = new CadastrodeUsuario();
+            rejstracjaUzytkownika cu = new rejstracjaUzytkownika();
             cu.Show();
         }
 

@@ -113,7 +113,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CadastroUsuario.xaml">
+    <Page Include="Views\rejstracjaUzytkownika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,8 +135,8 @@
     <Compile Include="Views\CadastrarPaciente.xaml.cs">
       <DependentUpon>CadastrarPaciente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastroUsuario.xaml.cs">
-      <DependentUpon>CadastroUsuario.xaml</DependentUpon>
+    <Compile Include="Views\rejstracjaUzytkownika.xaml.cs">
+      <DependentUpon>rejstracjaUzytkownika.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

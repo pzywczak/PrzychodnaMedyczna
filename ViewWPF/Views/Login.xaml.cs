@@ -48,7 +48,7 @@ namespace ViewWPF.Views
 
         private void PrzyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
-            CadastrodeUsuario cu = new CadastrodeUsuario();
+            rejstracjaUzytkownikacu = new CadastrodeUsuario();
             cu.Show();
         }
     }

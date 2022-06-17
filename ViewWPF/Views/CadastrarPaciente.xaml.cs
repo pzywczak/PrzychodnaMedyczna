@@ -58,10 +58,10 @@ namespace ViewWPF.Views
             }
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private void przyciskEdytuj_Click(object sender, RoutedEventArgs e)
         {
             btnGravar.IsEnabled = false;
-            btnAlterar.IsEnabled = true;
+            przyciskUsun.IsEnabled = true;
 
             if (!string.IsNullOrEmpty(txtCpf.Text))
             {
@@ -89,7 +89,7 @@ namespace ViewWPF.Views
             }
         }
 
-        private void btnAlterar_Click(object sender, RoutedEventArgs e)
+        private void przyciskUsun_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {

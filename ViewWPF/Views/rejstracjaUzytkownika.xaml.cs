@@ -19,16 +19,16 @@ namespace ViewWPF.Views
     /// <summary>
     /// Interaction logic for CadastrodeUsuario.xaml
     /// </summary>
-    public partial class CadastrodeUsuario : Window
+    public partial class rejstracjaUzytkownika: Window
     {
-        public CadastrodeUsuario()
+        public rejstracjaUzytkownika()
         {
             InitializeComponent();
         }
 
         Usuario u = new Usuario();
 
-        private void btnGravar_Click(object sender, RoutedEventArgs e)
+        private void przyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(tLogin.Text) && !string.IsNullOrEmpty(tHaslo.Text))
             {
@@ -64,19 +64,19 @@ namespace ViewWPF.Views
             }
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private void przyciskEdytuj_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnAlterar_Click(object sender, RoutedEventArgs e)
+        private void przyciskUsun_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
         public bool TestarSenha()
         {
-            if (tHaslo.Text == txtConfirmSenha.Text)
+            if (tHaslo.Text == lpowtorzHaslo.Text)
             {
                 return true;
             }
@@ -87,7 +87,7 @@ namespace ViewWPF.Views
         {
             tLogin.Clear();
             tHaslo.Clear();
-            txtConfirmSenha.Clear();
+            lpowtorzHaslo.Clear();
             tLogin.Focus();
         }
     }

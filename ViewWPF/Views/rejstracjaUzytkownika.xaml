@@ -1,4 +1,4 @@
-﻿<Window x:Class="ViewWPF.Views.CadastrodeUsuario"
+﻿<Window x:Class="ViewWPF.Views.rejstracjaUzytkownika"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -22,10 +22,10 @@
         <Label x:Name="lblLogin" Content="Login:" Grid.Row="0" Grid.Column="0" 
                HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,2,10" Height="27" Width="45"/>
 
-        <Label x:Name="hHaslo" Content="Senha:" Grid.Row="1" Grid.Column="0" 
+        <Label x:Name="hHaslo" Content="Haslo:" Grid.Row="1" Grid.Column="0" 
                HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,13,0,12" Height="26" Width="47"/>
 
-        <Label x:Name="lblConfimSenha" Content="Confirmar Senha:" Grid.Row="2" Grid.Column="0" 
+        <Label x:Name="powtorzHaslo" Content="Powtorz haslo:" Grid.Row="2" Grid.Column="0" 
                HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,13,239,12" Height="26" Width="109" Grid.ColumnSpan="2"/>
         <!--Labels-->
 
@@ -39,27 +39,27 @@
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="1" Height="27"/>
 
-        <TextBox x:Name="txtConfirmSenha" Grid.Row="2" Grid.Column="1" 
+        <TextBox x:Name="lpowtorzHaslo" Grid.Row="2" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="0" Height="28"/>
         <!--TextBoxs-->
 
         <!--Buttons-->
-        <Button x:Name="btnGravar" Content="Gravar" Grid.Row="3" 
+        <Button x:Name="przyciskDodaj" Content="Dodaj" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
-                TabIndex="2" Margin="0,3,0,14" Height="30" Width="55" Click="btnGravar_Click"/>
+                TabIndex="2" Margin="0,3,0,14" Height="30" Width="55" Click="przyciskDodaj_Click"/>
 
-        <Button x:Name="btnBuscar" Content="Buscar" Grid.Row="3" 
+        <Button x:Name="przyciskEdytuj" Content="Edytuj" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" IsEnabled="False"
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
-                Margin="94,3,0,14" TabIndex="3" Height="30" Width="55" Click="btnBuscar_Click"/>
+                Margin="94,3,0,14" TabIndex="3" Height="30" Width="55" Click="przyciskEdytuj_Click"/>
 
-        <Button x:Name="btnAlterar" Content="Alterar" Grid.Row="3" 
+        <Button x:Name="przyciskUsun" Content="Usun" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
                 Margin="181,3,0,14" TabIndex="3"
-                IsEnabled="False" Height="30" Width="55" Click="btnAlterar_Click"/>
+                IsEnabled="False" Height="30" Width="55" Click="przyciskUsun_Click"/>
         <!--Buttons-->
 
     </Grid>

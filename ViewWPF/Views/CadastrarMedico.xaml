@@ -50,16 +50,16 @@
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
                 TabIndex="2" Margin="0,3,0,14" Height="30" Width="55" Click="btnGravar_Click"/>
 
-        <Button x:Name="btnBuscar" Content="Buscar" Grid.Row="3" 
+        <Button x:Name="przyciskEdytuj" Content="Buscar" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
-                Margin="94,3,0,14" TabIndex="3" Height="30" Width="55" Click="btnBuscar_Click"/>
+                Margin="94,3,0,14" TabIndex="3" Height="30" Width="55" Click="przyciskEdytuj_Click"/>
 
-        <Button x:Name="btnAlterar" Content="Alterar" Grid.Row="3" 
+        <Button x:Name="przyciskUsun" Content="Alterar" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
                 Margin="181,3,0,14" TabIndex="3"
-                IsEnabled="False" Height="30" Width="55" Click="btnAlterar_Click"/>
+                IsEnabled="False" Height="30" Width="55" Click="przyciskUsun_Click"/>
         <!--Buttons-->
 
     </Grid>
