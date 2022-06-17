@@ -26,7 +26,7 @@ namespace ViewWPF.Views
 
             if (u != null && TestarSenha(u.Senha))
             {
-                PaginaInicial pi = new PaginaInicial();
+                GlowneMenu pi = new GlowneMenu();
                 pi.Show();
                 this.Close();
             }
@@ -48,7 +48,7 @@ namespace ViewWPF.Views
 
         private void PrzyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
-            rejstracjaUzytkownikacu = new CadastrodeUsuario();
+            rejstracjaUzytkownika cu = new rejstracjaUzytkownika();
             cu.Show();
         }
     }

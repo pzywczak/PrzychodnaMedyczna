@@ -23,7 +23,7 @@
             <TextBlock Text="Bem vindo Fulano" />
         </StackPanel>
         
-        <!--Topo - Sair-->
+        <!--Topo - Wyjdz-->
         <StackPanel Name="pnlLogout" Grid.Column="1">
             <Button Name="btnLogout" Content="Logout" Click="btnLogout_Click" />
         </StackPanel>

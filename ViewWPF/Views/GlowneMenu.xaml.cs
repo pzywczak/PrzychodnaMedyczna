@@ -15,47 +15,47 @@ using System.Windows.Shapes;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for PaginaInicial.xaml
+    /// Interaction logic for GlowneMenu.xaml
     /// </summary>
-    public partial class PaginaInicial : Window
+    public partial class GlowneMenu : Window
     {
-        public PaginaInicial()
+        public GlowneMenu()
         {
             InitializeComponent();
         }
 
-        private void Sair_Click(object sender, RoutedEventArgs e)
+        private void Wyjdz_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Close();
         }
 
-        private void cadastrarPaciente_Click(object sender, RoutedEventArgs e)
+        private void zarejestrujPacjenta_Click(object sender, RoutedEventArgs e)
         {
             CadastrarPaciente cp = new CadastrarPaciente();
             cp.Show();
         }
 
-        private void cadastrarMedico_Click(object sender, RoutedEventArgs e)
+        private void zarejestrujLekarza_Click(object sender, RoutedEventArgs e)
         {
             CadastrarMedico cm = new CadastrarMedico();
             cm.Show();
         }
 
-        private void cadastrarUsuario_Click(object sender, RoutedEventArgs e)
+        private void zarejestrujUzytkownika_Click(object sender, RoutedEventArgs e)
         {
             rejstracjaUzytkownika cu = new rejstracjaUzytkownika();
             cu.Show();
         }
 
-        private void ListMedicos_Click(object sender, RoutedEventArgs e)
+        private void ListaLekarzy_Click(object sender, RoutedEventArgs e)
         {
             MedicosCadastrados mc = new MedicosCadastrados();
             mc.Show();
         }
 
-        private void ListPacientes_Click(object sender, RoutedEventArgs e)
+        private void ListaPacjentow_Click(object sender, RoutedEventArgs e)
         {
             PacientesCadastrados pc = new PacientesCadastrados();
             pc.Show();
