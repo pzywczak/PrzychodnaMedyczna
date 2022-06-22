@@ -10,7 +10,7 @@ namespace ViewWPF.DAL
 {
     class Uzytkownik
     {
-        private static PrzychodniaLekarskaEntities ctx = Singleton.Instance.Context;
+        private static PrzychodniaLekarskaEntities ctx = Singel.Instance.Context;
 
         public static bool zapiszUzytkownika(Uzytkownicy uzytkownik)
         {

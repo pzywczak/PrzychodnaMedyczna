@@ -26,7 +26,7 @@ namespace ViewWPF.Views
         public ListaPacjentow()
         {
             InitializeComponent();
-            MoiPacjenci = PacienteDAO.ListagemFiltradaDePacientes(Program.Batatinha);
+            MoiPacjenci = Pacient.filtrListaPacjentow(Program.Batatinha);
             DataContext = this;
             dataGrid.Items.Refresh();
         }

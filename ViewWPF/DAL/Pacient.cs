@@ -6,18 +6,18 @@ using ViewWPF.baza;
 
 namespace ViewWPF.DAL
 {
-    class PacienteDAO
+    class Pacient
     {
 
-        private static PrzychodniaLekarskaEntities ctx = Singleton.Instance.Context;
+        private static PrzychodniaLekarskaEntities ctx = Singel.Instance.Context;
 
-        public static bool SalvarPaciente(Pacjenci paciente)
+        public static bool zapiszPacjenta(Pacjenci pacjent)
         {
-            if (BuscarPacientePorCPF(paciente) == null)
+            if (wyszukajPacjentaPoAdresie(pacjent) == null)
             {
                 try
                 {
-                    ctx.Pacjencis.Add(paciente);
+                    ctx.Pacjencis.Add(pacjent);
                     ctx.SaveChanges();
                     return true;
                 }
@@ -32,11 +32,11 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static bool AlterarPaciente(Pacjenci paciente)
+        public static bool zmienPacjenta(Pacjenci pacjent)
         {
             try
             {
-                ctx.Entry(paciente).State = System.Data.Entity.EntityState.Modified;
+                ctx.Entry(pacjent).State = System.Data.Entity.EntityState.Modified;
                 ctx.SaveChanges();
                 return true;
             }
@@ -47,36 +47,25 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static Pacjenci BuscarPacientePorCPF(Pacjenci paciente)
+        public static Pacjenci wyszukajPacjentaPoAdresie(Pacjenci paciente)
         {
             return ctx.Pacjencis.FirstOrDefault(x => x.Adres.Equals(paciente.Adres));
         }
 
-        public static List<Pacjenci> ListagemDePacientes()
+        public static List<Pacjenci> listaPacjentow()
         {
             return ctx.Pacjencis.ToList();
         }
 
-        public static List<Pacjenci> ListagemFiltradaDePacientes(int id)
+        public static List<Pacjenci> filtrListaPacjentow(int id)
         {
-            //List<Paciente> ListaFiltrada = new List<Paciente>();
-
-            //foreach (Paciente pacienteTestado in ctx.Pacientes.ToList())
-            //{
-            //    if (pacienteTestado.UsuarioId.Equals(id))
-            //    {
-            //        ListaFiltrada.Add(pacienteTestado);
-            //    }
-            //}
-            //return ListaFiltrada;
-
             return ctx.Pacjencis.Where(p => p.USERID== id).ToList();
         }
 
-        public static int Contagem()
+        public static int Wynik()
         {
             List<Pacjenci> ListaFiltrada = new List<Pacjenci>();
-            ListaFiltrada = ListagemFiltradaDePacientes(Program.Batatinha);
+            ListaFiltrada = filtrListaPacjentow(Program.Batatinha);
             int cont = ListaFiltrada.Count;
             return cont;
         }

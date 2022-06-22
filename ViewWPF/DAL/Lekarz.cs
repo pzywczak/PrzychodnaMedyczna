@@ -5,17 +5,17 @@ using ViewWPF.baza;
 
 namespace ViewWPF.DAL
 {
-    class MedicoDAO
+    class Lekarz
     {
-        private static PrzychodniaLekarskaEntities ctx = Singleton.Instance.Context;
+        private static PrzychodniaLekarskaEntities ctx = Singel.Instance.Context;
 
-        public static bool SalvarMedico(Lekarze medico)
+        public static bool zapiszLekarza(Lekarze lekarz)
         {
-            if (BuscarMedicoPorCPF(medico) == null)
+            if (wyszukajLekarzaPoAdresie(lekarz) == null)
             {
-                try // CAMINHO FELIZ
+                try 
                 {
-                    ctx.Lekarzes.Add(medico);
+                    ctx.Lekarzes.Add(lekarz);
                     ctx.SaveChanges();
                     return true;
                 }
@@ -30,11 +30,11 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static bool AlterarMedico(Lekarze medico)
+        public static bool zmienPacjenta(Lekarze lekarz)
         {
             try
             {
-                ctx.Entry(medico).State = System.Data.Entity.EntityState.Modified;
+                ctx.Entry(lekarz).State = System.Data.Entity.EntityState.Modified;
                 ctx.SaveChanges();
                 return true;
             }
@@ -45,27 +45,27 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static Lekarze ProcurarMedicoPorId(int id)
+        public static Lekarze szukajLekarzaPoId(int id)
         {
             return ctx.Lekarzes.Find(id);
         }
 
-        public static Lekarze BuscarMedicoPorCPF(Lekarze medico)
+        public static Lekarze wyszukajLekarzaPoAdresie(Lekarze medico)
         {
             return ctx.Lekarzes.FirstOrDefault(x => x.Adres.Equals(medico.Adres));
         }
 
-        public static Lekarze BuscarMedicoPorNome(Lekarze medico)
+        public static Lekarze wyszukajLekarzaPoImieniuINaziwsku(Lekarze medico)
         {
             return ctx.Lekarzes.FirstOrDefault(x => x.ImieINazwisko.Equals(medico.ImieINazwisko));
         }
 
-        public static List<Lekarze> ListagemDeMedicos()
+        public static List<Lekarze> listaLekarzy()
         {
             return ctx.Lekarzes.ToList();
         }
 
-        public static List<Lekarze> ListagemFiltradaDeMedicos(int id)
+        public static List<Lekarze> filtrListaLekarzy(int id)
         {
             List<Lekarze> ListaFiltrada = new List<Lekarze>();
 
@@ -79,10 +79,10 @@ namespace ViewWPF.DAL
             return ListaFiltrada;
         }
 
-        public static int Contagem()
+        public static int Wynik()
         {
             List<Lekarze> ListaFiltrada = new List<Lekarze>();
-            ListaFiltrada = ListagemFiltradaDeMedicos(Program.Batatinha);
+            ListaFiltrada = filtrListaLekarzy(Program.Batatinha);
             int cont = ListaFiltrada.Count;
             return cont;
         }

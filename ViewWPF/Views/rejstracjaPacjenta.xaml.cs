@@ -39,7 +39,7 @@ namespace ViewWPF.Views
                     Telefon = txtTelefone.Text,
                     USERID = Program.Batatinha
                 };
-                if (PacienteDAO.SalvarPaciente(p))
+                if (Pacient.zapiszPacjenta(p))
                 {
                     MessageBox.Show("Pacjent zarejestrowany!", "OK", MessageBoxButton.OK, MessageBoxImage.Information);
                     wyczyscPola();
@@ -67,7 +67,7 @@ namespace ViewWPF.Views
                 {
                     Adres = txtCpf.Text
                 };
-                p = PacienteDAO.BuscarPacientePorCPF(p);
+                p = Pacient.wyszukajPacjentaPoAdresie(p);
                 if (p != null)
                 {
                     txtNome.Text = p.ImieINazwisko;
@@ -91,7 +91,7 @@ namespace ViewWPF.Views
             {
                 p.ImieINazwisko = txtNome.Text;
                 p.Adres = txtCpf.Text;
-                if (PacienteDAO.AlterarPaciente(p))
+                if (Pacient.zmienPacjenta(p))
                 {
                     MessageBox.Show("Pomyslnie zmieniono pacjenta!", "OK", MessageBoxButton.OK, MessageBoxImage.Information);
                     wyczyscPola();

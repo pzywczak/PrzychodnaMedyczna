@@ -106,9 +106,9 @@
     <Compile Include="baza\Wizyty.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\MedicoDAO.cs" />
-    <Compile Include="DAL\PacienteDAO.cs" />
-    <Compile Include="DAL\Singleton.cs" />
+    <Compile Include="DAL\Lekarz.cs" />
+    <Compile Include="DAL\Pacient.cs" />
+    <Compile Include="DAL\Singel.cs" />
     <Compile Include="DAL\Uzytkownik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Views\ListaLekarzy.xaml.cs">

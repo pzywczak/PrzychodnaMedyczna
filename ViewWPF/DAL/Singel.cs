@@ -2,17 +2,17 @@
 
 namespace ViewWPF.DAL
 {
-    class Singleton
+    class Singel
     {
-        private static readonly Singleton instance = new Singleton();
+        private static readonly Singel instance = new Singel();
         private readonly PrzychodniaLekarskaEntities context;
 
-        private Singleton()
+        private Singel()
         {
             context = new PrzychodniaLekarskaEntities();
         }
 
-        public static Singleton Instance
+        public static Singel Instance
         {
             get
             {

@@ -39,7 +39,7 @@ namespace ViewWPF.Views
                     Specjalizacja = txtEspecialidade.Text,
                     USERID = Program.Batatinha
                 };
-                if (MedicoDAO.SalvarMedico(m))
+                if (Lekarz.zapiszLekarza(m))
                 {
                     MessageBox.Show("Lekarz zarejestrowany!", "OK",
                         MessageBoxButton.OK, MessageBoxImage.Information);
@@ -69,7 +69,7 @@ namespace ViewWPF.Views
                 {
                     Adres = txtCpf.Text
                 };
-                m = MedicoDAO.BuscarMedicoPorCPF(m);
+                m = Lekarz.wyszukajLekarzaPoAdresie(m);
                 if (m != null)
                 {
                     txtNome.Text = m.ImieINazwisko;
@@ -90,7 +90,7 @@ namespace ViewWPF.Views
                     {
                         ImieINazwisko = txtNome.Text
                     };
-                    m = MedicoDAO.BuscarMedicoPorNome(m);
+                    m = Lekarz.wyszukajLekarzaPoImieniuINaziwsku(m);
                     if (m != null)
                     {
                         txtNome.Text = m.ImieINazwisko;
@@ -114,7 +114,7 @@ namespace ViewWPF.Views
                 m.Adres = txtCpf.Text;
                 m.Specjalizacja = txtEspecialidade.Text;
 
-                if (MedicoDAO.AlterarMedico(m))
+                if (Lekarz.zmienPacjenta(m))
                 {
                     MessageBox.Show("Pomyslnie zmieniono lekarza!", "OK",
                         MessageBoxButton.OK, MessageBoxImage.Information);
