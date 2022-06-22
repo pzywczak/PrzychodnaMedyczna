@@ -110,6 +110,7 @@
     <Compile Include="DAL\Pacient.cs" />
     <Compile Include="DAL\Singel.cs" />
     <Compile Include="DAL\Uzytkownik.cs" />
+    <Compile Include="DAL\Wizyta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Views\ListaLekarzy.xaml.cs">
       <DependentUpon>ListaLekarzy.xaml</DependentUpon>
