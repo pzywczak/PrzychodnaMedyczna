@@ -8,17 +8,17 @@ using ViewWPF.baza;
 
 namespace ViewWPF.DAL
 {
-    class UsuarioDAO
+    class Uzytkownik
     {
         private static PrzychodniaLekarskaEntities ctx = Singleton.Instance.Context;
 
-        public static bool SalvarUsuario(Uzytkownicy usuario)
+        public static bool zapiszUzytkownika(Uzytkownicy uzytkownik)
         {
-            if (BuscarUsuarioPorLogin(usuario) == null)
+            if (szukajUzytkownikaPoLoginu(uzytkownik) == null)
             {
                 try
                 {
-                    ctx.Uzytkownicies.Add(usuario);
+                    ctx.Uzytkownicies.Add(uzytkownik);
                     ctx.SaveChanges();
                     return true;
                 }
@@ -33,11 +33,11 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static bool AlterarUsuario(Uzytkownicy usuario)
+        public static bool zmienUzytkownika(Uzytkownicy uzytkownik)
         {
             try
             {
-                ctx.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+                ctx.Entry(uzytkownik).State = System.Data.Entity.EntityState.Modified;
                 ctx.SaveChanges();
                 return true;
             }
@@ -48,12 +48,12 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static Uzytkownicy BuscarUsuarioPorLogin(Uzytkownicy usuario)
+        public static Uzytkownicy szukajUzytkownikaPoLoginu(Uzytkownicy uzytkownik)
         {
-            return ctx.Uzytkownicies.FirstOrDefault(x => x.Login.Equals(usuario.Login));
+            return ctx.Uzytkownicies.FirstOrDefault(x => x.Login.Equals(uzytkownik.Login));
         }
 
-        public static Uzytkownicy BuscarUsuarioPorLogin2(String login)
+        public static Uzytkownicy szukajUzytkownikaPoLoginu2(String login)
         {
             return ctx.Uzytkownicies.FirstOrDefault(x => x.Login.Equals(login));
         }

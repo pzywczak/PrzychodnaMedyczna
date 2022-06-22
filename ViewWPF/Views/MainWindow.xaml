@@ -25,7 +25,7 @@
         
         <!--Topo - Wyjdz-->
         <StackPanel Name="pnlLogout" Grid.Column="1">
-            <Button Name="btnLogout" Content="Logout" Click="btnLogout_Click" />
+            <Button Name="przyciskWyloguj" Content="Logout" Click="przyciskWyloguj_Click" />
         </StackPanel>
         
         <!--Menu-->

@@ -21,7 +21,7 @@ namespace ViewWPF.Views
         private void PrzyciskZaloguj_Click(object sender, RoutedEventArgs e)
         {
             u = new Uzytkownicy();
-            u = UsuarioDAO.BuscarUsuarioPorLogin2(tLogin.Text);
+            u = Uzytkownik.szukajUzytkownikaPoLoginu2(tLogin.Text);
             Program.Batatinha = u.Id;
 
             if (u != null && hasloSprawdz(u.Haslo))
@@ -32,14 +32,13 @@ namespace ViewWPF.Views
             }
             else
             {
-                MessageBox.Show("Login / Senha Incorretos!", "SGCS WPF",
-                                MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Nie prawidlowy Login/Haslo", "BLAD", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private bool hasloSprawdz(String senha)
+        private bool hasloSprawdz(String haslo)
         {
-            if (senha.Equals(tHaslo.Password.ToString()))
+            if (haslo.Equals(tHaslo.Password.ToString()))
             {
                 return true;
             }

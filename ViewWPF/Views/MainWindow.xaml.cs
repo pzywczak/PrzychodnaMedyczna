@@ -25,7 +25,7 @@ namespace ViewWPF.Views
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        private void przyciskWyloguj_Click(object sender, RoutedEventArgs e)
         {
             Login l = new Login();
             l.Show();

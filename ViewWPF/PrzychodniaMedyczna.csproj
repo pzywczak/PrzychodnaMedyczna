@@ -109,7 +109,7 @@
     <Compile Include="DAL\MedicoDAO.cs" />
     <Compile Include="DAL\PacienteDAO.cs" />
     <Compile Include="DAL\Singleton.cs" />
-    <Compile Include="DAL\UsuarioDAO.cs" />
+    <Compile Include="DAL\Uzytkownik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Views\ListaLekarzy.xaml.cs">
       <DependentUpon>ListaLekarzy.xaml</DependentUpon>

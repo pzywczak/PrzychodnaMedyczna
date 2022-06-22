@@ -39,7 +39,7 @@ namespace ViewWPF.Views
                         Login = tLogin.Text,
                         Haslo = tHaslo.Text,
                     };
-                    if (UsuarioDAO.SalvarUsuario(u))
+                    if (Uzytkownik.zapiszUzytkownika(u))
                     {
                         MessageBox.Show("Uzytkownik zarejestrowany!", "BLAD", MessageBoxButton.OK, MessageBoxImage.Information);
                         wyczyscPola();

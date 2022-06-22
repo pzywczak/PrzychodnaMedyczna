@@ -21,12 +21,12 @@ namespace ViewWPF.Views
     /// </summary>
     public partial class ListaLekarzy : Window
     {
-        public List<Lekarze> MeusMedicos { get; set; }
+        public List<Lekarze> MoiLekarze { get; set; }
 
         public ListaLekarzy()
         {
             InitializeComponent();
-            MeusMedicos = MedicoDAO.ListagemFiltradaDeMedicos(Program.Batatinha);
+            MoiLekarze = MedicoDAO.ListagemFiltradaDeMedicos(Program.Batatinha);
             DataContext = this;
             dataGrid.Items.Refresh();
         }
