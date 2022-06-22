@@ -1,11 +1,11 @@
-﻿<Window x:Class="ViewWPF.Views.CadastrarMedico"
+﻿<Window x:Class="ViewWPF.Views.rejstracjaLekarza"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewWPF.Views"
         mc:Ignorable="d"
-        Title="CadastrarMedico" Height="234.545" Width="355.909" WindowStartupLocation="CenterScreen">
+        Title="REJSTROWANIE LEKARZA" Height="234.545" Width="355.909" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -17,18 +17,18 @@
             <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="75*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--Labels-->
-        <Label x:Name="lblNome" Content="Nome:" Grid.Row="0" Grid.Column="0" 
-               HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,0,10" Height="24" Width="45"/>
+        <Label x:Name="ImieiNazwisko" Content="Imie i nazwisko:" Grid.Row="0" Grid.Column="0" 
+               HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,0,13" Height="24" Width="99"/>
 
-        <Label x:Name="lblCpf" Content="CPF:" Grid.Row="1" Grid.Column="0" 
-               HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10" Height="26" Width="33"/>
+        <Label x:Name="lAdres" Content="Adres:" Grid.Row="1" Grid.Column="0" 
+               HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,13,0,12" Height="26" Width="51"/>
 
-        <Label x:Name="lblEspecialidade" Content="Especialidade:" Grid.Row="2" Grid.Column="0" 
+        <Label x:Name="lSpecjalizacja" Content="Specjalizacja:" Grid.Row="2" Grid.Column="0" 
                HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-1,6,0,5" Height="26" Width="84"/>
         <!--Labels-->
-        
+
         <!--TextBoxs-->
         <TextBox x:Name="txtNome" Grid.Row="0" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
@@ -43,23 +43,23 @@
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="0" Height="28"/>
         <!--TextBoxs-->
-        
+
         <!--Buttons-->
-        <Button x:Name="btnGravar" Content="Gravar" Grid.Row="3" 
+        <Button x:Name="przyciskDodaj" Content="Dodaj" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
-                TabIndex="2" Margin="0,3,0,14" Height="30" Width="55" Click="btnGravar_Click"/>
+                TabIndex="2" Margin="0,3,0,14" Height="30" Width="55" Click="przyciskDodaj_Click"/>
 
-        <Button x:Name="przyciskEdytuj" Content="Buscar" Grid.Row="3" 
+        <Button x:Name="przyciskSzukaj" Content="Szukaj" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
-                Margin="94,3,0,14" TabIndex="3" Height="30" Width="55" Click="przyciskEdytuj_Click"/>
+                Margin="94,3,0,14" TabIndex="3" Height="30" Width="55" Click="przyciskSzukaj_Click"/>
 
-        <Button x:Name="przyciskUsun" Content="Alterar" Grid.Row="3" 
+        <Button x:Name="przyciskZmien" Content="Zmien" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
                 Margin="181,3,0,14" TabIndex="3"
-                IsEnabled="False" Height="30" Width="55" Click="przyciskUsun_Click"/>
+                IsEnabled="False" Height="30" Width="55" Click="przyciskZmien_Click"/>
         <!--Buttons-->
 
     </Grid>

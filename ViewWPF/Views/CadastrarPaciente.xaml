@@ -20,10 +20,10 @@
         </Grid.ColumnDefinitions>
 
         <!--Labels-->
-        <Label x:Name="lblNome" Content="Nome:" Grid.Row="0" Grid.Column="0" 
+        <Label x:Name="ImieiNazwisko" Content="Nome:" Grid.Row="0" Grid.Column="0" 
                HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
-        <Label x:Name="lblCpf" Content="CPF:" Grid.Row="1" Grid.Column="0" 
+        <Label x:Name="lAdres" Content="CPF:" Grid.Row="1" Grid.Column="0" 
                HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
         <Label x:Name="lblTelefone" Content="Telefone:" Grid.Row="2" Grid.Column="0" 
@@ -46,10 +46,10 @@
         <!--TextBoxs-->
         
         <!--Buttons-->
-        <Button x:Name="btnGravar" Content="Gravar" Grid.Row="3" 
+        <Button x:Name="przyciskDodaj" Content="Gravar" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Center" FontSize="12" Padding="5" 
-                TabIndex="2" Margin="0,7,0,10" Click="btnGravar_Click"/>
+                TabIndex="2" Margin="0,7,0,10" Click="przyciskDodaj_Click"/>
 
         <Button x:Name="przyciskEdytuj" Content="Buscar" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 

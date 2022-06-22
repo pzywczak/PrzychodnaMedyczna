@@ -17,13 +17,13 @@ using ViewWPF.baza;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for PacientesCadastrados.xaml
+    /// Interaction logic for ListaPacjentow.xaml
     /// </summary>
-    public partial class PacientesCadastrados : Window
+    public partial class ListaPacjentow : Window
     {
         public List<Pacjenci> MeusPacientes { get; set; }
 
-        public PacientesCadastrados()
+        public ListaPacjentow()
         {
             InitializeComponent();
             MeusPacientes = PacienteDAO.ListagemFiltradaDePacientes(Program.Batatinha);

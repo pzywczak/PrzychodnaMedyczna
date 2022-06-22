@@ -111,16 +111,16 @@
     <Compile Include="DAL\Singleton.cs" />
     <Compile Include="DAL\UsuarioDAO.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Views\MedicosCadastrados.xaml.cs">
-      <DependentUpon>MedicosCadastrados.xaml</DependentUpon>
+    <Compile Include="Views\ListaLekarzy.xaml.cs">
+      <DependentUpon>ListaLekarzy.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PacientesCadastrados.xaml.cs">
-      <DependentUpon>PacientesCadastrados.xaml</DependentUpon>
+    <Compile Include="Views\ListaPacjentow.xaml.cs">
+      <DependentUpon>ListaPacjentow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GlowneMenu.xaml.cs">
       <DependentUpon>GlowneMenu.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\CadastrarMedico.xaml">
+    <Page Include="Views\rejstracjaLekarza.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,8 +144,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\CadastrarMedico.xaml.cs">
-      <DependentUpon>CadastrarMedico.xaml</DependentUpon>
+    <Compile Include="Views\rejstracjaLekarza.xaml.cs">
+      <DependentUpon>rejstracjaLekarza.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CadastrarPaciente.xaml.cs">
       <DependentUpon>CadastrarPaciente.xaml</DependentUpon>
@@ -160,11 +160,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\MedicosCadastrados.xaml">
+    <Page Include="Views\ListaLekarzy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PacientesCadastrados.xaml">
+    <Page Include="Views\ListaPacjentow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

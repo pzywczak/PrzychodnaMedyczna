@@ -1,11 +1,11 @@
-﻿<Window x:Class="ViewWPF.Views.PacientesCadastrados"
+﻿<Window x:Class="ViewWPF.Views.ListaPacjentow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewWPF.Views"
         mc:Ignorable="d"
-        Title="PacientesCadastrados" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+        Title="ListaPacjentow" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -22,11 +22,11 @@
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" 
                   Height="169" Width="235" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding MeusPacientes}" >
             <DataGrid.Columns>
-                <DataGridTextColumn Width="115" Header="Nome" Binding="{Binding Nome}" />
-                <DataGridTextColumn Width="115" Header="Telefone" Binding="{Binding Telefone}"/>
+                <DataGridTextColumn Width="115" Header="Imie i nazwisko" Binding="{Binding ImieINazwisko}" />
+                <DataGridTextColumn Width="115" Header="Telefon" Binding="{Binding Telefon}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="lblPacientesCadastrados" Content="Pacientes Cadastrados" Grid.Column="1" 
+        <Label x:Name="lListaPacjentow" Content="Pacientes Cadastrados" Grid.Column="1" 
                HorizontalAlignment="Left" Margin="52,14,0,0" VerticalAlignment="Top" Height="37" Width="128"/>
 
     </Grid>

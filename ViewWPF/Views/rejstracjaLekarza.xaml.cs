@@ -17,18 +17,18 @@ using ViewWPF.baza;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for CadastrarMedico.xaml
+    /// Interaction logic for rejstracjaLekarza.xaml
     /// </summary>
-    public partial class CadastrarMedico : Window
+    public partial class rejstracjaLekarza : Window
     {
-        public CadastrarMedico()
+        public rejstracjaLekarza()
         {
             InitializeComponent();
         }
 
         Lekarze m = new Lekarze();
 
-        private void btnGravar_Click(object sender, RoutedEventArgs e)
+        private void przyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {
@@ -58,10 +58,10 @@ namespace ViewWPF.Views
             }
         }
 
-        private void przyciskEdytuj_Click(object sender, RoutedEventArgs e)
+        private void przyciskSzukaj_Click(object sender, RoutedEventArgs e)
         {
-            btnGravar.IsEnabled = false;
-            przyciskUsun.IsEnabled = true;
+            przyciskDodaj.IsEnabled = false;
+            przyciskSzukaj.IsEnabled = true;
 
             if (!string.IsNullOrEmpty(txtCpf.Text))
             {
@@ -106,7 +106,7 @@ namespace ViewWPF.Views
             }
         }
 
-        private void przyciskUsun_Click(object sender, RoutedEventArgs e)
+        private void przyciskZmien_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {

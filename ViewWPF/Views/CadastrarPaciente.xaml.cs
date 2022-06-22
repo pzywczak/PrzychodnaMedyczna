@@ -28,7 +28,7 @@ namespace ViewWPF.Views
 
         Pacjenci p = new Pacjenci();
 
-        private void btnGravar_Click(object sender, RoutedEventArgs e)
+        private void przyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {
@@ -60,7 +60,7 @@ namespace ViewWPF.Views
 
         private void przyciskEdytuj_Click(object sender, RoutedEventArgs e)
         {
-            btnGravar.IsEnabled = false;
+            przyciskDodaj.IsEnabled = false;
             przyciskUsun.IsEnabled = true;
 
             if (!string.IsNullOrEmpty(txtCpf.Text))

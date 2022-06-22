@@ -39,7 +39,7 @@ namespace ViewWPF.Views
 
         private void zarejestrujLekarza_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarMedico cm = new CadastrarMedico();
+            rejstracjaLekarza cm = new rejstracjaLekarza();
             cm.Show();
         }
 
@@ -51,13 +51,13 @@ namespace ViewWPF.Views
 
         private void ListaLekarzy_Click(object sender, RoutedEventArgs e)
         {
-            MedicosCadastrados mc = new MedicosCadastrados();
+            ListaLekarzy mc = new ListaLekarzy();
             mc.Show();
         }
 
         private void ListaPacjentow_Click(object sender, RoutedEventArgs e)
         {
-            PacientesCadastrados pc = new PacientesCadastrados();
+            ListaPacjentow pc = new ListaPacjentow();
             pc.Show();
         }
     }
