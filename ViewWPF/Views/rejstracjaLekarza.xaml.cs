@@ -41,19 +41,19 @@ namespace ViewWPF.Views
                 };
                 if (MedicoDAO.SalvarMedico(m))
                 {
-                    MessageBox.Show("Medico cadastrado com sucesso!", "SGCS WPF",
+                    MessageBox.Show("Lekarz zarejestrowany!", "OK",
                         MessageBoxButton.OK, MessageBoxImage.Information);
                     wyczyscPola();
                 }
                 else
                 {
-                    MessageBox.Show("Não foi possível adicionar o Medico!", "SGCS WPF",
+                    MessageBox.Show("Nie mozna zarejstrowac lekarza!", "BLAD",
                        MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Favor preencher os campos", "SGCS WPF",
+                MessageBox.Show("Podaj dane", "BLAD",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
@@ -78,7 +78,7 @@ namespace ViewWPF.Views
                 }
                 else
                 {
-                    MessageBox.Show("Não foi possível encontrar o Medico!", "SGCS WPF",
+                    MessageBox.Show("Nie mozna znalezc lekarza", "BLAD",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
@@ -100,7 +100,7 @@ namespace ViewWPF.Views
                 }
                 else
                 {
-                    MessageBox.Show("Favor preencher os campos", "SGCS WPF",
+                    MessageBox.Show("Podaj dane!", "BLAD",
                     MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
@@ -116,20 +116,19 @@ namespace ViewWPF.Views
 
                 if (MedicoDAO.AlterarMedico(m))
                 {
-                    MessageBox.Show("Paciente alterado com sucesso!", "SGCS WPF",
+                    MessageBox.Show("Pomyslnie zmieniono lekarza!", "OK",
                         MessageBoxButton.OK, MessageBoxImage.Information);
                     wyczyscPola();
                 }
                 else
                 {
-                    MessageBox.Show("Não foi possível alterar o Paciente!", "SGCS WPF",
+                    MessageBox.Show("Nie mozna zmienic lekarza", "BLAD",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Favor preencher os campos", "SGCS WPF",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Podaj dane!", "BLAD", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
