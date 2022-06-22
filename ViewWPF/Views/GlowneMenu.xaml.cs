@@ -60,5 +60,15 @@ namespace ViewWPF.Views
             ListaPacjentow pc = new ListaPacjentow();
             pc.Show();
         }
+        private void ListaWizyt_Click(object sender, RoutedEventArgs e)
+        {
+            ListaLekarzy mc = new ListaLekarzy();
+            mc.Show();
+        }
+
+        private void zarejestrujWizyte_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

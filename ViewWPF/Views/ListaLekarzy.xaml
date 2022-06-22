@@ -23,6 +23,7 @@
                   Height="169" Width="235" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding MoiLekarze}" >
             <DataGrid.Columns>
                 <DataGridTextColumn Width="115" Header="Imie i nazwisko" Binding="{Binding ImieINazwisko}" />
+                <DataGridTextColumn Width="115" Header="Imie i nazwisko" Binding="{Binding Adres}" />
                 <DataGridTextColumn Width="115" Header="Specjalizacja" Binding="{Binding Specjalizacja}"/>
             </DataGrid.Columns>
         </DataGrid>

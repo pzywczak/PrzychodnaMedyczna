@@ -23,13 +23,15 @@
                 <MenuItem x:Name="Wyjdz" Header="Wyjdz" Margin="10,0,0,0" Background="#FF0066CC" Click="Wyjdz_Click"/>
             </MenuItem>
             <MenuItem Header="Dodaj"  Width="107" FontWeight="Black" Foreground="White" >
-                <MenuItem x:Name="zarejestrujPacjenta" Header="Pacjenta" HorizontalAlignment="Left" Width="140" Background="#FF0066CC" Click="zarejestrujPacjenta_Click"/>
-                <MenuItem x:Name="zarejestrujLekarza" Header="Lekarza" HorizontalAlignment="Left" Width="140" Background="#FF0066CC" Click="zarejestrujLekarza_Click"/>
-                <MenuItem x:Name="zarejestrujUzytkownika" Header="Uzytkownika" HorizontalAlignment="Left" Width="140" Foreground="White" Background="#FF0066CC" Click="zarejestrujUzytkownika_Click"/>
+                <MenuItem x:Name="zarejestrujPacjenta" Header="Pacjenta" HorizontalAlignment="Left" Width="170" Background="#FF0066CC" Click="zarejestrujPacjenta_Click"/>
+                <MenuItem x:Name="zarejestrujLekarza" Header="Lekarza" HorizontalAlignment="Left" Width="170" Background="#FF0066CC" Click="zarejestrujLekarza_Click"/>
+                <MenuItem x:Name="zarejestrujUzytkownika" Header="Uzytkownika" HorizontalAlignment="Left" Width="170" Foreground="White" Background="#FF0066CC" Click="zarejestrujUzytkownika_Click"/>
+                <MenuItem x:Name="zarejestrujWizyte" Header="Wizyte" HorizontalAlignment="Left" Width="170" Background="#FF0066CC" Click="zarejestrujWizyte_Click"/>
             </MenuItem>
             <MenuItem Header="Lista" Width="90" FontWeight="Black" Background="#FF0066CC" Foreground="White">
                 <MenuItem x:Name="ListaLekarzy" Header="Lekarzy" HorizontalAlignment="Left" Width="150" Background="#FF0066CC" Click="ListaLekarzy_Click"/>
                 <MenuItem x:Name="ListaPacjentow" Header="Pacjentow" HorizontalAlignment="Left" Width="150" Background="#FF0066CC" Click="ListaPacjentow_Click"/>
+                <MenuItem x:Name="ListaWizyt" Header="Wizyty" HorizontalAlignment="Left" Width="150" Background="#FF0066CC" Click="ListaWizyty_Click"/>
             </MenuItem>
         </Menu>
         <Image HorizontalAlignment="Left" Height="197" Margin="50,63,0,0" VerticalAlignment="Top" Width="234" Source="/ViewWPF;component/Images/medical-g3be956076_1280.png"/>

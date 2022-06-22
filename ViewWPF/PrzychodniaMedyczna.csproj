@@ -120,6 +120,16 @@
     <Compile Include="Views\GlowneMenu.xaml.cs">
       <DependentUpon>GlowneMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListaWizyt.xaml.cs">
+      <DependentUpon>ListaWizyt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rejstracjaWizyty.xaml.cs">
+      <DependentUpon>rejstracjaWizyty.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\ListaWizyt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\rejstracjaLekarza.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\GlowneMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\rejstracjaWizyty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ViewWPF.Views"
         mc:Ignorable="d"
         Title="Przychodnia lekarska" Height="300" Width="300" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid HorizontalAlignment="Right" Width="292">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30*" />
@@ -23,6 +23,7 @@
                   Height="169" Width="235" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding MoiPacjenci}" >
             <DataGrid.Columns>
                 <DataGridTextColumn Width="115" Header="Imie i nazwisko" Binding="{Binding ImieINazwisko}" />
+                <DataGridTextColumn Width="115" Header="Adres" Binding="{Binding Adres}"/>
                 <DataGridTextColumn Width="115" Header="Telefon" Binding="{Binding Telefon}"/>
             </DataGrid.Columns>
         </DataGrid>
