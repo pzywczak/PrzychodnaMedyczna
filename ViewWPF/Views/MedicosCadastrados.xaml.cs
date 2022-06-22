@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewWPF.DAL;
-using ViewWPF.Models;
+using ViewWPF.baza;
 
 namespace ViewWPF.Views
 {
@@ -21,7 +21,7 @@ namespace ViewWPF.Views
     /// </summary>
     public partial class MedicosCadastrados : Window
     {
-        public List<Medico> MeusMedicos { get; set; }
+        public List<Lekarze> MeusMedicos { get; set; }
 
         public MedicosCadastrados()
         {

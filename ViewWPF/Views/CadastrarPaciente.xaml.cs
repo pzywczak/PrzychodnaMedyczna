@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewWPF.DAL;
-using ViewWPF.Models;
+using ViewWPF.baza;
 
 namespace ViewWPF.Views
 {
@@ -26,18 +26,18 @@ namespace ViewWPF.Views
             InitializeComponent();
         }
 
-        Paciente p = new Paciente();
+        Pacjenci p = new Pacjenci();
 
         private void btnGravar_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {
-                p = new Paciente
+                p = new Pacjenci
                 {
-                    Nome = txtNome.Text,
-                    CPF = txtCpf.Text,
-                    Telefone = txtTelefone.Text,
-                    UsuarioId = Program.Batatinha
+                    ImieINazwisko = txtNome.Text,
+                    Adres = txtCpf.Text,
+                    Telefon = txtTelefone.Text,
+                    USERID = Program.Batatinha
                 };
                 if (PacienteDAO.SalvarPaciente(p))
                 {
@@ -65,16 +65,16 @@ namespace ViewWPF.Views
 
             if (!string.IsNullOrEmpty(txtCpf.Text))
             {
-                p = new Paciente
+                p = new Pacjenci
                 {
-                    CPF = txtCpf.Text
+                    Adres = txtCpf.Text
                 };
                 p = PacienteDAO.BuscarPacientePorCPF(p);
                 if (p != null)
                 {
-                    txtNome.Text = p.Nome;
-                    txtCpf.Text = p.CPF;
-                    txtTelefone.Text = p.Telefone;
+                    txtNome.Text = p.ImieINazwisko;
+                    txtCpf.Text = p.Adres;
+                    txtTelefone.Text = p.Telefon;
                 }
                 else
                 {
@@ -93,8 +93,8 @@ namespace ViewWPF.Views
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {
-                p.Nome = txtNome.Text;
-                p.CPF = txtCpf.Text;
+                p.ImieINazwisko = txtNome.Text;
+                p.Adres = txtCpf.Text;
                 if (PacienteDAO.AlterarPaciente(p))
                 {
                     MessageBox.Show("Paciente alterado com sucesso!", "SGCS WPF",

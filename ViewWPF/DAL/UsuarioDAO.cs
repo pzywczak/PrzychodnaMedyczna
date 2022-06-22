@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using ViewWPF.Models;
+using ViewWPF.baza;
 
 namespace ViewWPF.DAL
 {
     class UsuarioDAO
     {
-        private static Context ctx = Singleton.Instance.Context;
+        private static PrzychodniaLekarskaEntities ctx = Singleton.Instance.Context;
 
-        public static bool SalvarUsuario(Usuario usuario)
+        public static bool SalvarUsuario(Uzytkownicy usuario)
         {
             if (BuscarUsuarioPorLogin(usuario) == null)
             {
                 try
                 {
-                    ctx.Usuarios.Add(usuario);
+                    ctx.Uzytkownicies.Add(usuario);
                     ctx.SaveChanges();
                     return true;
                 }
@@ -33,7 +33,7 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static bool AlterarUsuario(Usuario usuario)
+        public static bool AlterarUsuario(Uzytkownicy usuario)
         {
             try
             {
@@ -48,14 +48,14 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static Usuario BuscarUsuarioPorLogin(Usuario usuario)
+        public static Uzytkownicy BuscarUsuarioPorLogin(Uzytkownicy usuario)
         {
-            return ctx.Usuarios.FirstOrDefault(x => x.Login.Equals(usuario.Login));
+            return ctx.Uzytkownicies.FirstOrDefault(x => x.Login.Equals(usuario.Login));
         }
 
-        public static Usuario BuscarUsuarioPorLogin2(String login)
+        public static Uzytkownicy BuscarUsuarioPorLogin2(String login)
         {
-            return ctx.Usuarios.FirstOrDefault(x => x.Login.Equals(login));
+            return ctx.Uzytkownicies.FirstOrDefault(x => x.Login.Equals(login));
         }
 
     }

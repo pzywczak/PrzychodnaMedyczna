@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using ViewWPF.Models;
+using ViewWPF.baza;
 
 namespace ViewWPF.DAL
 {
     class PacienteDAO
     {
 
-        private static Context ctx = Singleton.Instance.Context;
+        private static PrzychodniaLekarskaEntities ctx = Singleton.Instance.Context;
 
-        public static bool SalvarPaciente(Paciente paciente)
+        public static bool SalvarPaciente(Pacjenci paciente)
         {
             if (BuscarPacientePorCPF(paciente) == null)
             {
                 try
                 {
-                    ctx.Pacientes.Add(paciente);
+                    ctx.Pacjencis.Add(paciente);
                     ctx.SaveChanges();
                     return true;
                 }
@@ -32,7 +32,7 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static bool AlterarPaciente(Paciente paciente)
+        public static bool AlterarPaciente(Pacjenci paciente)
         {
             try
             {
@@ -47,17 +47,17 @@ namespace ViewWPF.DAL
             }
         }
 
-        public static Paciente BuscarPacientePorCPF(Paciente paciente)
+        public static Pacjenci BuscarPacientePorCPF(Pacjenci paciente)
         {
-            return ctx.Pacientes.FirstOrDefault(x => x.CPF.Equals(paciente.CPF));
+            return ctx.Pacjencis.FirstOrDefault(x => x.Adres.Equals(paciente.Adres));
         }
 
-        public static List<Paciente> ListagemDePacientes()
+        public static List<Pacjenci> ListagemDePacientes()
         {
-            return ctx.Pacientes.ToList();
+            return ctx.Pacjencis.ToList();
         }
 
-        public static List<Paciente> ListagemFiltradaDePacientes(int id)
+        public static List<Pacjenci> ListagemFiltradaDePacientes(int id)
         {
             //List<Paciente> ListaFiltrada = new List<Paciente>();
 
@@ -70,12 +70,12 @@ namespace ViewWPF.DAL
             //}
             //return ListaFiltrada;
 
-            return ctx.Pacientes.Where(p => p.UsuarioId == id).ToList();
+            return ctx.Pacjencis.Where(p => p.USERID== id).ToList();
         }
 
         public static int Contagem()
         {
-            List<Paciente> ListaFiltrada = new List<Paciente>();
+            List<Pacjenci> ListaFiltrada = new List<Pacjenci>();
             ListaFiltrada = ListagemFiltradaDePacientes(Program.Batatinha);
             int cont = ListaFiltrada.Count;
             return cont;

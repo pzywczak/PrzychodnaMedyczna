@@ -1,15 +1,15 @@
-﻿using ViewWPF.Models;
+﻿using ViewWPF.baza;
 
 namespace ViewWPF.DAL
 {
     class Singleton
     {
         private static readonly Singleton instance = new Singleton();
-        private readonly Context context;
+        private readonly PrzychodniaLekarskaEntities context;
 
         private Singleton()
         {
-            context = new Context();
+            context = new PrzychodniaLekarskaEntities();
         }
 
         public static Singleton Instance
@@ -20,7 +20,7 @@ namespace ViewWPF.DAL
             }
         }
 
-        public Context Context
+        public PrzychodniaLekarskaEntities Context
         {
             get
             {

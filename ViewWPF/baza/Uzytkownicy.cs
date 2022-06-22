@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ViewWPF.Models
+namespace ViewWPF.baza
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class Uzytkownicy
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuario()
+        public Uzytkownicy()
         {
-            this.Pacientes = new HashSet<Paciente>();
-            this.Medicos = new HashSet<Medico>();
+            this.Lekarzes = new HashSet<Lekarze>();
+            this.Pacjencis = new HashSet<Pacjenci>();
         }
     
         public int Id { get; set; }
         public string Login { get; set; }
-        public string Senha { get; set; }
+        public string Haslo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Paciente> Pacientes { get; set; }
+        public virtual ICollection<Lekarze> Lekarzes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Medico> Medicos { get; set; }
+        public virtual ICollection<Pacjenci> Pacjencis { get; set; }
     }
 }

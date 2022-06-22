@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewWPF.DAL;
-using ViewWPF.Models;
+using ViewWPF.baza;
 
 namespace ViewWPF.Views
 {
@@ -26,18 +26,18 @@ namespace ViewWPF.Views
             InitializeComponent();
         }
 
-        Medico m = new Medico();
+        Lekarze m = new Lekarze();
 
         private void btnGravar_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {
-                m = new Medico()
+                m = new Lekarze()
                 {
-                    Nome = txtNome.Text,
-                    CPF = txtCpf.Text,
-                    Especialidade = txtEspecialidade.Text,
-                    UsuarioId = Program.Batatinha
+                    ImieINazwisko = txtNome.Text,
+                    Adres = txtCpf.Text,
+                    Specjalizacja = txtEspecialidade.Text,
+                    USERID = Program.Batatinha
                 };
                 if (MedicoDAO.SalvarMedico(m))
                 {
@@ -65,16 +65,16 @@ namespace ViewWPF.Views
 
             if (!string.IsNullOrEmpty(txtCpf.Text))
             {
-                m = new Medico
+                m = new Lekarze
                 {
-                    CPF = txtCpf.Text
+                    Adres = txtCpf.Text
                 };
                 m = MedicoDAO.BuscarMedicoPorCPF(m);
                 if (m != null)
                 {
-                    txtNome.Text = m.Nome;
-                    txtCpf.Text = m.CPF;
-                    txtEspecialidade.Text = m.Especialidade;
+                    txtNome.Text = m.ImieINazwisko;
+                    txtCpf.Text = m.Adres;
+                    txtEspecialidade.Text = m.Specjalizacja;
                 }
                 else
                 {
@@ -86,16 +86,16 @@ namespace ViewWPF.Views
             {
                 if (!string.IsNullOrEmpty(txtNome.Text))
                 {
-                    m = new Medico
+                    m = new Lekarze
                     {
-                        Nome = txtNome.Text
+                        ImieINazwisko = txtNome.Text
                     };
                     m = MedicoDAO.BuscarMedicoPorNome(m);
                     if (m != null)
                     {
-                        txtNome.Text = m.Nome;
-                        txtCpf.Text = m.CPF;
-                        txtEspecialidade.Text = m.Especialidade;
+                        txtNome.Text = m.ImieINazwisko;
+                        txtCpf.Text = m.Adres;
+                        txtEspecialidade.Text = m.Specjalizacja;
                     }
                 }
                 else
@@ -110,9 +110,9 @@ namespace ViewWPF.Views
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {
-                m.Nome = txtNome.Text;
-                m.CPF = txtCpf.Text;
-                m.Especialidade = txtEspecialidade.Text;
+                m.ImieINazwisko = txtNome.Text;
+                m.Adres = txtCpf.Text;
+                m.Specjalizacja = txtEspecialidade.Text;
 
                 if (MedicoDAO.AlterarMedico(m))
                 {

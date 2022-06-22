@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 using ViewWPF.DAL;
-using ViewWPF.Models;
+using ViewWPF.baza;
 
 namespace ViewWPF.Views
 {
@@ -16,15 +16,15 @@ namespace ViewWPF.Views
             InitializeComponent();
         }
 
-        Usuario u = new Usuario();
+        Uzytkownicy u = new Uzytkownicy();
 
         private void PrzyciskZaloguj_Click(object sender, RoutedEventArgs e)
         {
-            u = new Usuario();
+            u = new Uzytkownicy();
             u = UsuarioDAO.BuscarUsuarioPorLogin2(tLogin.Text);
             Program.Batatinha = u.Id;
 
-            if (u != null && TestarSenha(u.Senha))
+            if (u != null && TestarSenha(u.Haslo))
             {
                 GlowneMenu pi = new GlowneMenu();
                 pi.Show();

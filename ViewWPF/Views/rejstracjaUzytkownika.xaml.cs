@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewWPF.DAL;
-using ViewWPF.Models;
+using ViewWPF.baza;
 
 namespace ViewWPF.Views
 {
@@ -26,7 +26,7 @@ namespace ViewWPF.Views
             InitializeComponent();
         }
 
-        Usuario u = new Usuario();
+        Uzytkownicy u = new Uzytkownicy();
 
         private void przyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
@@ -34,10 +34,10 @@ namespace ViewWPF.Views
             {
                 if (TestarSenha())
                 {
-                    u = new Usuario()
+                    u = new Uzytkownicy()
                     {
                         Login = tLogin.Text,
-                        Senha = tHaslo.Text,
+                        Haslo = tHaslo.Text,
                     };
                     if (UsuarioDAO.SalvarUsuario(u))
                     {

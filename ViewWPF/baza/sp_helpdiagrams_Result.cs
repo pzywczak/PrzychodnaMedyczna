@@ -7,19 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ViewWPF.Models
+namespace ViewWPF.baza
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Medico
+    public partial class sp_helpdiagrams_Result
     {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string CPF { get; set; }
-        public string Especialidade { get; set; }
-        public int UsuarioId { get; set; }
-    
-        public virtual Usuario Usuario { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

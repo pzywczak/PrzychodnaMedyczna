@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ViewWPF.Models
+namespace ViewWPF.baza
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Paciente
+    public partial class Pacjenci
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string CPF { get; set; }
-        public string Telefone { get; set; }
-        public int UsuarioId { get; set; }
+        public string ImieINazwisko { get; set; }
+        public string Adres { get; set; }
+        public string Telefon { get; set; }
+        public int USERID { get; set; }
     
-        public virtual Usuario Usuario { get; set; }
+        public virtual Uzytkownicy Uzytkownicy { get; set; }
     }
 }

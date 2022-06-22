@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56b443bf4a854e00bab97ed58fd06902" Name="Diagram1">
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Lekarze" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Pacjenci" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Uzytkownicy" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Wizyty" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="PrzychodniaLekarskaModel.FK_dbo_Medicos_dbo_Usuarios_UsuarioId" ManuallyRouted="false" />
+        <AssociationConnector Association="PrzychodniaLekarskaModel.FK_dbo_Pacientes_dbo_Usuarios_UsuarioId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
