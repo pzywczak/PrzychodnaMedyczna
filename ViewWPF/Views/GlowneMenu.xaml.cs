@@ -33,7 +33,7 @@ namespace ViewWPF.Views
 
         private void zarejestrujPacjenta_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarPaciente cp = new CadastrarPaciente();
+            rejstracjaPacjenta cp = new rejstracjaPacjenta();
             cp.Show();
         }
 

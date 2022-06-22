@@ -24,7 +24,7 @@ namespace ViewWPF.Views
             u = UsuarioDAO.BuscarUsuarioPorLogin2(tLogin.Text);
             Program.Batatinha = u.Id;
 
-            if (u != null && TestarSenha(u.Haslo))
+            if (u != null && hasloSprawdz(u.Haslo))
             {
                 GlowneMenu pi = new GlowneMenu();
                 pi.Show();
@@ -37,7 +37,7 @@ namespace ViewWPF.Views
             }
         }
 
-        private bool TestarSenha(String senha)
+        private bool hasloSprawdz(String senha)
         {
             if (senha.Equals(tHaslo.Password.ToString()))
             {

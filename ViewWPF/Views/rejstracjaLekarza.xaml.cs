@@ -43,7 +43,7 @@ namespace ViewWPF.Views
                 {
                     MessageBox.Show("Medico cadastrado com sucesso!", "SGCS WPF",
                         MessageBoxButton.OK, MessageBoxImage.Information);
-                    LimparCampos();
+                    wyczyscPola();
                 }
                 else
                 {
@@ -118,7 +118,7 @@ namespace ViewWPF.Views
                 {
                     MessageBox.Show("Paciente alterado com sucesso!", "SGCS WPF",
                         MessageBoxButton.OK, MessageBoxImage.Information);
-                    LimparCampos();
+                    wyczyscPola();
                 }
                 else
                 {
@@ -133,7 +133,7 @@ namespace ViewWPF.Views
             }
         }
 
-        public void LimparCampos()
+        public void wyczyscPola()
         {
             txtNome.Clear();
             txtCpf.Clear();

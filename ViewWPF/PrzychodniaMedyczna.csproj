@@ -124,7 +124,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CadastrarPaciente.xaml">
+    <Page Include="Views\rejstracjaPacjenta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,8 +147,8 @@
     <Compile Include="Views\rejstracjaLekarza.xaml.cs">
       <DependentUpon>rejstracjaLekarza.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastrarPaciente.xaml.cs">
-      <DependentUpon>CadastrarPaciente.xaml</DependentUpon>
+    <Compile Include="Views\rejstracjaPacjenta.xaml.cs">
+      <DependentUpon>rejstracjaPacjenta.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\rejstracjaUzytkownika.xaml.cs">
       <DependentUpon>rejstracjaUzytkownika.xaml</DependentUpon>

@@ -32,7 +32,7 @@ namespace ViewWPF.Views
         {
             if (!string.IsNullOrEmpty(tLogin.Text) && !string.IsNullOrEmpty(tHaslo.Text))
             {
-                if (TestarSenha())
+                if (hasloSprawdz())
                 {
                     u = new Uzytkownicy()
                     {
@@ -41,26 +41,22 @@ namespace ViewWPF.Views
                     };
                     if (UsuarioDAO.SalvarUsuario(u))
                     {
-                        MessageBox.Show("Usuário cadastrado com sucesso!", "SGCS WPF",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-                        LimparCampos();
+                        MessageBox.Show("Uzytkownik zarejestrowany!", "BLAD", MessageBoxButton.OK, MessageBoxImage.Information);
+                        wyczyscPola();
                     }
                     else
                     {
-                        MessageBox.Show("Não foi possível adicionar o Usuário!", "SGCS WPF",
-                            MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("Uzytkownik nie zostal zarejestrowany!", "BLAD",MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("As Senhas não Coincidem!", "SGCS WPF",
-                        MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Haslo nie pasuje!", "BLAD", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Favor preencher os campos", "SGCS WPF",
-                   MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Podaj dane!", "BLAD", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -74,7 +70,7 @@ namespace ViewWPF.Views
 
         }
 
-        public bool TestarSenha()
+        public bool hasloSprawdz()
         {
             if (tHaslo.Text == lpowtorzHaslo.Text)
             {
@@ -83,7 +79,7 @@ namespace ViewWPF.Views
             return false;
         }
 
-        public void LimparCampos()
+        public void wyczyscPola()
         {
             tLogin.Clear();
             tHaslo.Clear();

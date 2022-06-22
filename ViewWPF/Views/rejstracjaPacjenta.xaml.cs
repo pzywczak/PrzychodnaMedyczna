@@ -17,11 +17,11 @@ using ViewWPF.baza;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for CadastrarPaciente.xaml
+    /// Interaction logic for rejstracjaPacjenta.xaml
     /// </summary>
-    public partial class CadastrarPaciente : Window
+    public partial class rejstracjaPacjenta : Window
     {
-        public CadastrarPaciente()
+        public rejstracjaPacjenta()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace ViewWPF.Views
                 {
                     MessageBox.Show("Paciente cadastrado com sucesso!", "SGCS WPF",
                         MessageBoxButton.OK, MessageBoxImage.Information);
-                    LimparCampos();
+                    wyczyscPola();
                 }
                 else
                 {
@@ -58,10 +58,10 @@ namespace ViewWPF.Views
             }
         }
 
-        private void przyciskEdytuj_Click(object sender, RoutedEventArgs e)
+        private void przyciskSzukaj_Click(object sender, RoutedEventArgs e)
         {
             przyciskDodaj.IsEnabled = false;
-            przyciskUsun.IsEnabled = true;
+            przyciskZmien.IsEnabled = true;
 
             if (!string.IsNullOrEmpty(txtCpf.Text))
             {
@@ -89,7 +89,7 @@ namespace ViewWPF.Views
             }
         }
 
-        private void przyciskUsun_Click(object sender, RoutedEventArgs e)
+        private void przyciskZmien_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
             {
@@ -99,7 +99,7 @@ namespace ViewWPF.Views
                 {
                     MessageBox.Show("Paciente alterado com sucesso!", "SGCS WPF",
                         MessageBoxButton.OK, MessageBoxImage.Information);
-                    LimparCampos();
+                    wyczyscPola();
                 }
                 else
                 {
@@ -114,7 +114,7 @@ namespace ViewWPF.Views
             }
         }
 
-        public void LimparCampos()
+        public void wyczyscPola()
         {
             txtNome.Clear();
             txtCpf.Clear();
