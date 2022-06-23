@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using ViewWPF.baza;
 
-namespace ViewWPF.DAL
+namespace ViewWPF.Class
 {
     class Uzytkownik
     {

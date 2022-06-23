@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewWPF.Views"
         mc:Ignorable="d"
-        Title="rejstracjaWizyty" Height="450" Width="800">
+        Title="Dodaj wizyte" Height="250" Width="355.909" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Labels-->
+        <Label x:Name="lData" Content=" Data:" Grid.Row="0" Grid.Column="0" 
+               HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,2,10" Height="27" Width="45"/>
+
+        <Label x:Name="lGodzina" Content="Godzina:" Grid.Row="1" Grid.Column="0" 
+               HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,15,0,14" Height="26" Width="59"/>
+
+        <Label x:Name="lTypWizyty" Content="        Typ Wizyty:" Grid.Row="2" Grid.Column="0" 
+               HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,15,0,14" Height="26" Width="99"/>
+
+        <!--Labels-->
+
+        <!--TextBoxs-->
+        <TextBox x:Name="tData" Grid.Row="0" Grid.Column="1" 
+                 HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                 Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="1" Height="27"/>
+
+        <TextBox x:Name="tGodzina" Grid.Row="1" Grid.Column="1" 
+                 HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                 Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="1" Height="27"/>
+
+        <TextBox x:Name="tTypWizyty" Grid.Row="2" Grid.Column="1" 
+                 HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                 Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="0" Height="28"/>
+        <!--TextBoxs-->
+
+        <!--Buttons-->
+        <Button x:Name="przyciskDodaj" Content="Dodaj" Grid.Row="3" 
+                Grid.Column="1" HorizontalAlignment="Left" 
+                VerticalAlignment="Center" FontSize="12" Padding="5" 
+                TabIndex="2" Margin="0,3,0,14" Height="30" Width="55" Click="przyciskDodaj_Click"/>
+
+        <Button x:Name="przyciskEdytuj" Content="Edytuj" Grid.Row="3" 
+                Grid.Column="1" HorizontalAlignment="Left" IsEnabled="False"
+                VerticalAlignment="Center" FontSize="12" Padding="5" 
+                Margin="94,3,0,14" TabIndex="3" Height="30" Width="55" Click="przyciskEdytuj_Click"/>
+
+        <Button x:Name="przyciskUsun" Content="Usun" Grid.Row="3" 
+                Grid.Column="1" HorizontalAlignment="Left" 
+                VerticalAlignment="Center" FontSize="12" Padding="5" 
+                Margin="181,3,0,14" TabIndex="3"
+                IsEnabled="False" Height="30" Width="55" Click="przyciskUsun_Click"/>
+        <!--Buttons-->
+
     </Grid>
 </Window>

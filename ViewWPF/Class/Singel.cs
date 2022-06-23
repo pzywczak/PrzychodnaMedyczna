@@ -1,6 +1,6 @@
 ﻿using ViewWPF.baza;
 
-namespace ViewWPF.DAL
+namespace ViewWPF.Class
 {
     class Singel
     {

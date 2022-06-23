@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows;
 using ViewWPF.baza;
 
-namespace ViewWPF.DAL
+namespace ViewWPF.Class
 {
     class Pacient
     {

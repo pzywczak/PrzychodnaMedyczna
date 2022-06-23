@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ViewWPF.baza;
 
-namespace ViewWPF.DAL
+namespace ViewWPF.Class
 {
     class Lekarz
     {

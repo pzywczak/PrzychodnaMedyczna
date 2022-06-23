@@ -48,6 +48,11 @@ namespace ViewWPF.Views
             rejstracjaUzytkownika cu = new rejstracjaUzytkownika();
             cu.Show();
         }
+        private void zarejestrujWizyte_Click(object sender, RoutedEventArgs e)
+        {
+            rejstracjaWizyty cw = new rejstracjaWizyty();
+            cw.Show();
+        }
 
         private void ListaLekarzy_Click(object sender, RoutedEventArgs e)
         {
@@ -66,9 +71,6 @@ namespace ViewWPF.Views
             mc.Show();
         }
 
-        private void zarejestrujWizyte_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
     }
 }
