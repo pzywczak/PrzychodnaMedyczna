@@ -57,11 +57,13 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Data" Type="nvarchar(max)" />
           <Property Name="Godzina" Type="nvarchar(max)" />
           <Property Name="TypWizyty" Type="nvarchar(max)" />
           <Property Name="CzyOdbyta" Type="nvarchar(max)" />
+          <Property Name="Id_pacjenta" Type="int" />
+          <Property Name="Id_lekarza" Type="int" />
         </EntityType>
         <Association Name="FK_dbo_Medicos_dbo_Usuarios_UsuarioId">
           <End Role="Uzytkownicy" Type="Self.Uzytkownicy" Multiplicity="1">
@@ -88,6 +90,30 @@
             </Principal>
             <Dependent Role="Pacjenci">
               <PropertyRef Name="USERID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Wizyty_Lekarze">
+          <End Role="Lekarze" Type="Self.Lekarze" Multiplicity="0..1" />
+          <End Role="Wizyty" Type="Self.Wizyty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lekarze">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Wizyty">
+              <PropertyRef Name="Id_lekarza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Wizyty_Pacjenci">
+          <End Role="Pacjenci" Type="Self.Pacjenci" Multiplicity="0..1" />
+          <End Role="Wizyty" Type="Self.Wizyty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pacjenci">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Wizyty">
+              <PropertyRef Name="Id_pacjenta" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -137,6 +163,14 @@
             <End Role="Uzytkownicy" EntitySet="Uzytkownicy" />
             <End Role="Pacjenci" EntitySet="Pacjenci" />
           </AssociationSet>
+          <AssociationSet Name="FK_Wizyty_Lekarze" Association="Self.FK_Wizyty_Lekarze">
+            <End Role="Lekarze" EntitySet="Lekarze" />
+            <End Role="Wizyty" EntitySet="Wizyty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Wizyty_Pacjenci" Association="Self.FK_Wizyty_Pacjenci">
+            <End Role="Pacjenci" EntitySet="Pacjenci" />
+            <End Role="Wizyty" EntitySet="Wizyty" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -163,6 +197,7 @@
           <Property Name="Specjalizacja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="USERID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Uzytkownicy" Relationship="Self.FK_dbo_Medicos_dbo_Usuarios_UsuarioId" FromRole="Lekarze" ToRole="Uzytkownicy" />
+          <NavigationProperty Name="Wizyties" Relationship="Self.FK_Wizyty_Lekarze" FromRole="Lekarze" ToRole="Wizyty" />
         </EntityType>
         <EntityType Name="Pacjenci">
           <Key>
@@ -174,6 +209,7 @@
           <Property Name="Telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="USERID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Uzytkownicy" Relationship="Self.FK_dbo_Pacientes_dbo_Usuarios_UsuarioId" FromRole="Pacjenci" ToRole="Uzytkownicy" />
+          <NavigationProperty Name="Wizyties" Relationship="Self.FK_Wizyty_Pacjenci" FromRole="Pacjenci" ToRole="Wizyty" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -199,11 +235,15 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Godzina" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TypWizyty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CzyOdbyta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id_pacjenta" Type="Int32" />
+          <Property Name="Id_lekarza" Type="Int32" />
+          <NavigationProperty Name="Lekarze" Relationship="Self.FK_Wizyty_Lekarze" FromRole="Wizyty" ToRole="Lekarze" />
+          <NavigationProperty Name="Pacjenci" Relationship="Self.FK_Wizyty_Pacjenci" FromRole="Wizyty" ToRole="Pacjenci" />
         </EntityType>
         <Association Name="FK_dbo_Medicos_dbo_Usuarios_UsuarioId">
           <End Role="Uzytkownicy" Type="Self.Uzytkownicy" Multiplicity="1">
@@ -216,6 +256,18 @@
             </Principal>
             <Dependent Role="Lekarze">
               <PropertyRef Name="USERID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Wizyty_Lekarze">
+          <End Role="Lekarze" Type="Self.Lekarze" Multiplicity="0..1" />
+          <End Role="Wizyty" Type="Self.Wizyty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lekarze">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Wizyty">
+              <PropertyRef Name="Id_lekarza" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -233,7 +285,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PrzychodniaLekarskaEntities" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_Wizyty_Pacjenci">
+          <End Role="Pacjenci" Type="Self.Pacjenci" Multiplicity="0..1" />
+          <End Role="Wizyty" Type="Self.Wizyty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pacjenci">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Wizyty">
+              <PropertyRef Name="Id_pacjenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PrzychodniaLekarskaEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
           <EntitySet Name="Lekarzes" EntityType="Self.Lekarze" />
           <EntitySet Name="Pacjencis" EntityType="Self.Pacjenci" />
@@ -244,9 +308,17 @@
             <End Role="Uzytkownicy" EntitySet="Uzytkownicies" />
             <End Role="Lekarze" EntitySet="Lekarzes" />
           </AssociationSet>
+          <AssociationSet Name="FK_Wizyty_Lekarze" Association="Self.FK_Wizyty_Lekarze">
+            <End Role="Lekarze" EntitySet="Lekarzes" />
+            <End Role="Wizyty" EntitySet="Wizyties" />
+          </AssociationSet>
           <AssociationSet Name="FK_dbo_Pacientes_dbo_Usuarios_UsuarioId" Association="Self.FK_dbo_Pacientes_dbo_Usuarios_UsuarioId">
             <End Role="Uzytkownicy" EntitySet="Uzytkownicies" />
             <End Role="Pacjenci" EntitySet="Pacjencis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Wizyty_Pacjenci" Association="Self.FK_Wizyty_Pacjenci">
+            <End Role="Pacjenci" EntitySet="Pacjencis" />
+            <End Role="Wizyty" EntitySet="Wizyties" />
           </AssociationSet>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -295,7 +367,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PrzychodniaLekarskaModelStoreContainer" CdmEntityContainer="PrzychodniaLekarskaEntities">
+        <EntityContainerMapping StorageEntityContainer="PrzychodniaLekarskaModelStoreContainer" CdmEntityContainer="PrzychodniaLekarskaEntities1">
           <EntitySetMapping Name="C__MigrationHistory">
             <EntityTypeMapping TypeName="PrzychodniaLekarskaModel.C__MigrationHistory">
               <MappingFragment StoreEntitySet="__MigrationHistory">
@@ -356,6 +428,8 @@
                 <ScalarProperty Name="Godzina" ColumnName="Godzina" />
                 <ScalarProperty Name="TypWizyty" ColumnName="TypWizyty" />
                 <ScalarProperty Name="CzyOdbyta" ColumnName="CzyOdbyta" />
+                <ScalarProperty Name="Id_pacjenta" ColumnName="Id_pacjenta" />
+                <ScalarProperty Name="Id_lekarza" ColumnName="Id_lekarza" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

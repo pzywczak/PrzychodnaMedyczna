@@ -10,7 +10,7 @@ namespace ViewWPF.Class
 {
     class Wizyta
     {
-        private static PrzychodniaLekarskaEntities ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities1 ctx = Singel.Instance.Context;
 
         public static bool zapiszWizyte(Wizyty pacjent)
         {

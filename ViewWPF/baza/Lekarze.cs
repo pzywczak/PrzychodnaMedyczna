@@ -14,6 +14,12 @@ namespace ViewWPF.baza
     
     public partial class Lekarze
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Lekarze()
+        {
+            this.Wizyties = new HashSet<Wizyty>();
+        }
+    
         public int Id { get; set; }
         public string ImieINazwisko { get; set; }
         public string Adres { get; set; }
@@ -21,5 +27,7 @@ namespace ViewWPF.baza
         public int USERID { get; set; }
     
         public virtual Uzytkownicy Uzytkownicy { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Wizyty> Wizyties { get; set; }
     }
 }

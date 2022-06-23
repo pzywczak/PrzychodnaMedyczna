@@ -5,11 +5,11 @@ namespace ViewWPF.Class
     class Singel
     {
         private static readonly Singel instance = new Singel();
-        private readonly PrzychodniaLekarskaEntities context;
+        private readonly PrzychodniaLekarskaEntities1 context;
 
         private Singel()
         {
-            context = new PrzychodniaLekarskaEntities();
+            context = new PrzychodniaLekarskaEntities1();
         }
 
         public static Singel Instance
@@ -20,7 +20,7 @@ namespace ViewWPF.Class
             }
         }
 
-        public PrzychodniaLekarskaEntities Context
+        public PrzychodniaLekarskaEntities1 Context
         {
             get
             {

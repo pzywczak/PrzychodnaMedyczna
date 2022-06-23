@@ -14,10 +14,15 @@ namespace ViewWPF.baza
     
     public partial class Wizyty
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Data { get; set; }
         public string Godzina { get; set; }
         public string TypWizyty { get; set; }
         public string CzyOdbyta { get; set; }
+        public Nullable<int> Id_pacjenta { get; set; }
+        public Nullable<int> Id_lekarza { get; set; }
+    
+        public virtual Lekarze Lekarze { get; set; }
+        public virtual Pacjenci Pacjenci { get; set; }
     }
 }
