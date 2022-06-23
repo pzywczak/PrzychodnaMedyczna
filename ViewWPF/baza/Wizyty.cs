@@ -21,8 +21,5 @@ namespace ViewWPF.baza
         public string CzyOdbyta { get; set; }
         public Nullable<int> Id_pacjenta { get; set; }
         public Nullable<int> Id_lekarza { get; set; }
-    
-        public virtual Lekarze Lekarze { get; set; }
-        public virtual Pacjenci Pacjenci { get; set; }
     }
 }

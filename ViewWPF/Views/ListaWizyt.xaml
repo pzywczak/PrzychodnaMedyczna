@@ -8,7 +8,13 @@
         Title="Lista Wizyt" Height="400" Width="700">
     <Grid>
         <DataGrid x:Name="dataGrid" VerticalAlignment="Top" 
-                  Height="232" AutoGenerateColumns="False" ItemsSource="{Binding MoiPacjenci}" Margin="37,105,37,0" />
+                  Height="232" AutoGenerateColumns="False" ItemsSource="{Binding MoiWizyty}" Margin="37,105,37,0" >
+        <DataGrid.Columns>
+            <DataGridTextColumn Width="115" Header="Data Wizyty" Binding="{Binding Data}" />
+            <DataGridTextColumn Width="115" Header="Godzina" Binding="{Binding Godzina}"/>
+            <DataGridTextColumn Width="115" Header="Typ wizyty" Binding="{Binding TypWizyty}"/>
+        </DataGrid.Columns>
+        </DataGrid>
         <Label Content="Lista wizyt&#xD;&#xA;" Margin="0,14,0,0" VerticalAlignment="Top" Height="52" FontSize="25" HorizontalAlignment="Center"/>
 
     </Grid>

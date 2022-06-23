@@ -4,17 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="67a49a628b03400faced50f8dba05b2f" Name="Diagram1">
-        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Lekarze" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Pacjenci" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Uzytkownicy" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Wizyty" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+      <Diagram DiagramId="8987e975fa964366b83f4555ed6baf47" Name="Diagram1">
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Lekarze" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Pacjenci" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Uzytkownicy" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaLekarskaModel.Wizyty" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="PrzychodniaLekarskaModel.FK_dbo_Medicos_dbo_Usuarios_UsuarioId" ManuallyRouted="false" />
-        <AssociationConnector Association="PrzychodniaLekarskaModel.FK_Wizyty_Lekarze" ManuallyRouted="false" />
         <AssociationConnector Association="PrzychodniaLekarskaModel.FK_dbo_Pacientes_dbo_Usuarios_UsuarioId" ManuallyRouted="false" />
-        <AssociationConnector Association="PrzychodniaLekarskaModel.FK_Wizyty_Pacjenci" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

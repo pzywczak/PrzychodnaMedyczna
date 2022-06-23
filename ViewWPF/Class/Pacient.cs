@@ -9,7 +9,7 @@ namespace ViewWPF.Class
     class Pacient
     {
 
-        private static PrzychodniaLekarskaEntities1 ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities2 ctx = Singel.Instance.Context;
 
         public static bool zapiszPacjenta(Pacjenci pacjent)
         {

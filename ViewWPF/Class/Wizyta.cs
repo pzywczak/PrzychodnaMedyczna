@@ -10,7 +10,7 @@ namespace ViewWPF.Class
 {
     class Wizyta
     {
-        private static PrzychodniaLekarskaEntities1 ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities2 ctx = Singel.Instance.Context;
 
         public static bool zapiszWizyte(Wizyty pacjent)
         {
@@ -48,7 +48,7 @@ namespace ViewWPF.Class
             return ctx.Wizyties.FirstOrDefault(x => x.Godzina.Equals(paciente.Godzina));
         }
 
-        public static List<Wizyty> listaPacjentow()
+        public static List<Wizyty> listaWizyt()
         {
             return ctx.Wizyties.ToList();
         }

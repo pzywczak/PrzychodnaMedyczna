@@ -15,10 +15,10 @@ namespace ViewWPF.baza
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class PrzychodniaLekarskaEntities1 : DbContext
+    public partial class PrzychodniaLekarskaEntities2 : DbContext
     {
-        public PrzychodniaLekarskaEntities1()
-            : base("name=PrzychodniaLekarskaEntities1")
+        public PrzychodniaLekarskaEntities2()
+            : base("name=PrzychodniaLekarskaEntities2")
         {
         }
     
