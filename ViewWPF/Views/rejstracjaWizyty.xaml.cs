@@ -31,6 +31,7 @@ namespace ViewWPF.Views
             {
                 u = new Wizyty()
                 {
+                    Id = Convert.ToInt32(tID.Text),
                     Data = tData.Text,
                     Godzina = tGodzina.Text,
                     TypWizyty = tTypWizyty.Text,

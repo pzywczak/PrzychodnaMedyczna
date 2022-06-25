@@ -53,6 +53,9 @@ namespace ViewWPF.Class
             return ctx.Wizyties.ToList();
         }
 
-
+        public static List<Wizyty> filtrListaWizyt(int id)
+        {
+            return ctx.Wizyties.Where(p => p.Id == id).ToList();
+        }
     }
 }

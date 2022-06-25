@@ -10,7 +10,8 @@
         <DataGrid x:Name="dataGrid" VerticalAlignment="Top" 
                   Height="232" AutoGenerateColumns="False" ItemsSource="{Binding MoiWizyty}" Margin="37,105,37,0" >
         <DataGrid.Columns>
-            <DataGridTextColumn Width="115" Header="Data Wizyty" Binding="{Binding Data}" />
+                <DataGridTextColumn Width="115" Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Width="115" Header="Data Wizyty" Binding="{Binding Data}" />
             <DataGridTextColumn Width="115" Header="Godzina" Binding="{Binding Godzina}"/>
             <DataGridTextColumn Width="115" Header="Typ wizyty" Binding="{Binding TypWizyty}"/>
         </DataGrid.Columns>

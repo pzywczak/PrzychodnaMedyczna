@@ -30,5 +30,7 @@ namespace ViewWPF.Views
             DataContext = this;
             dataGrid.Items.Refresh();
         }
+
+
     }
 }

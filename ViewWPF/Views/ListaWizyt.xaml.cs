@@ -21,11 +21,11 @@ namespace ViewWPF.Views
     /// </summary>
     public partial class ListaWizyt : Window
     {
-        public List<Pacjenci> MoiWizyty { get; set; }
+        public List<Wizyty> MoiWizyty { get; set; }
         public ListaWizyt()
         {
             InitializeComponent();
-         
+            MoiWizyty = Wizyta.listaWizyt();
             DataContext = this;
             dataGrid.Items.Refresh();
         }
