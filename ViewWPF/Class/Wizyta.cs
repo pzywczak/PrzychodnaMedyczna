@@ -43,19 +43,14 @@ namespace ViewWPF.Class
             }
         }
 
-        public static Wizyty wyszukajPacjentaPoAdresie(Wizyty paciente)
-        {
-            return ctx.Wizyties.FirstOrDefault(x => x.Godzina.Equals(paciente.Godzina));
-        }
-
         public static List<Wizyty> listaWizyt()
         {
             return ctx.Wizyties.ToList();
         }
 
-        public static List<Wizyty> filtrListaWizyt(int id)
+        public static void UsunWizyte(Wizyty pacjent)
         {
-            return ctx.Wizyties.Where(p => p.Id == id).ToList();
+            ctx.Wizyties.Remove(pacjent);
         }
     }
 }

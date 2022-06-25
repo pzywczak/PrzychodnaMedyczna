@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewWPF.Class;
 using ViewWPF.baza;
+using System.Text.RegularExpressions;
 
 namespace ViewWPF.Views
 {
@@ -30,13 +31,15 @@ namespace ViewWPF.Views
 
         private void przyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
+            Regex validatePhoneNumberRegex = new Regex("^\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}$");
+
+            if (!string.IsNullOrEmpty(tImieINazwisko.Text) && !string.IsNullOrEmpty(tAdres.Text) && validatePhoneNumberRegex.IsMatch(tTelefon.Text) )
             {
                 p = new Pacjenci
                 {
-                    ImieINazwisko = txtNome.Text,
-                    Adres = txtCpf.Text,
-                    Telefon = txtTelefone.Text,
+                    ImieINazwisko = tImieINazwisko.Text,
+                    Adres = tAdres.Text,
+                    Telefon = tTelefon.Text,
                     USERID = Program.Batatinha
                 };
                 if (Pacient.zapiszPacjenta(p))
@@ -51,7 +54,7 @@ namespace ViewWPF.Views
             }
             else
             {
-                MessageBox.Show("Podaj dane!", "BLAD",
+                MessageBox.Show("Podaj poprawne dane!", "BLAD",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
@@ -61,18 +64,18 @@ namespace ViewWPF.Views
             przyciskDodaj.IsEnabled = false;
             przyciskZmien.IsEnabled = true;
 
-            if (!string.IsNullOrEmpty(txtCpf.Text))
+            if (!string.IsNullOrEmpty(tAdres.Text))
             {
                 p = new Pacjenci
                 {
-                    Adres = txtCpf.Text
+                    Adres = tAdres.Text
                 };
                 p = Pacient.wyszukajPacjentaPoAdresie(p);
                 if (p != null)
                 {
-                    txtNome.Text = p.ImieINazwisko;
-                    txtCpf.Text = p.Adres;
-                    txtTelefone.Text = p.Telefon;
+                    tImieINazwisko.Text = p.ImieINazwisko;
+                    tAdres.Text = p.Adres;
+                    tTelefon.Text = p.Telefon;
                 }
                 else
                 {
@@ -87,10 +90,10 @@ namespace ViewWPF.Views
 
         private void przyciskZmien_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
+            if (!string.IsNullOrEmpty(tImieINazwisko.Text) && !string.IsNullOrEmpty(tAdres.Text))
             {
-                p.ImieINazwisko = txtNome.Text;
-                p.Adres = txtCpf.Text;
+                p.ImieINazwisko = tImieINazwisko.Text;
+                p.Adres = tAdres.Text;
                 if (Pacient.zmienPacjenta(p))
                 {
                     MessageBox.Show("Pomyslnie zmieniono pacjenta!", "OK", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -110,12 +113,11 @@ namespace ViewWPF.Views
 
         public void wyczyscPola()
         {
-            txtNome.Clear();
-            txtCpf.Clear();
-            txtTelefone.Clear();
-            txtNome.Focus();
+            tImieINazwisko.Clear();
+            tAdres.Clear();
+            tTelefon.Clear();
+            tImieINazwisko.Focus();
         }
-
 
 
     }

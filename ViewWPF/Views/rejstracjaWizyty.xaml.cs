@@ -27,7 +27,7 @@ namespace ViewWPF.Views
         Wizyty u = new Wizyty();
         public void przyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(tData.Text) && !string.IsNullOrEmpty(tGodzina.Text))
+            if (!string.IsNullOrEmpty(tData.Text) && !string.IsNullOrEmpty(tGodzina.Text) && godzinaFormat(tGodzina.Text))
             {
                 u = new Wizyty()
                 {
@@ -50,7 +50,7 @@ namespace ViewWPF.Views
             }
             else
             {
-                MessageBox.Show("Podaj dane", "BLAD",
+                MessageBox.Show("Podaj poprawne dane!", "BLAD",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
@@ -64,9 +64,13 @@ namespace ViewWPF.Views
         }
         public void wyczyscPola()
         {
-            tData.Clear();
             tGodzina.Clear();
             tTypWizyty.Clear();
+        }
+
+        public bool godzinaFormat(string input)
+        {
+            return TimeSpan.TryParse(input, out var dummyOutput);
         }
     }
 }

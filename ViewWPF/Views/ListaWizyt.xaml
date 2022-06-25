@@ -17,6 +17,7 @@
         </DataGrid.Columns>
         </DataGrid>
         <Label Content="Lista wizyt&#xD;&#xA;" Margin="0,14,0,0" VerticalAlignment="Top" Height="52" FontSize="25" HorizontalAlignment="Center"/>
+        <Button x:Name="UsunWizyte" Content="USUN" HorizontalAlignment="Left" Height="32" Margin="133,342,0,0" VerticalAlignment="Top" Width="118" Click="UsunWizyte_Click"/>
 
     </Grid>
 </Window>

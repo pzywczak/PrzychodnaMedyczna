@@ -30,12 +30,12 @@
         <!--Labels-->
 
         <!--TextBoxs-->
-        <TextBox x:Name="txtNome" Grid.Row="0" Grid.Column="1" 
+        <TextBox x:Name="tImieINazwisko" Grid.Row="0" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="0" Height="25">
         </TextBox>
 
-        <TextBox x:Name="txtCpf" Grid.Row="1" Grid.Column="1" 
+        <TextBox x:Name="tAdres" Grid.Row="1" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="1" Height="27"/>
 

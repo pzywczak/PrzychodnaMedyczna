@@ -30,12 +30,12 @@ namespace ViewWPF.Views
 
         private void przyciskDodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
+            if (!string.IsNullOrEmpty(tImieINazwisko.Text) && !string.IsNullOrEmpty(tAdres.Text))
             {
                 m = new Lekarze()
                 {
-                    ImieINazwisko = txtNome.Text,
-                    Adres = txtCpf.Text,
+                    ImieINazwisko = tImieINazwisko.Text,
+                    Adres = tAdres.Text,
                     Specjalizacja = txtEspecialidade.Text,
                     USERID = Program.Batatinha
                 };
@@ -63,17 +63,17 @@ namespace ViewWPF.Views
             przyciskDodaj.IsEnabled = false;
             przyciskSzukaj.IsEnabled = true;
 
-            if (!string.IsNullOrEmpty(txtCpf.Text))
+            if (!string.IsNullOrEmpty(tAdres.Text))
             {
                 m = new Lekarze
                 {
-                    Adres = txtCpf.Text
+                    Adres = tAdres.Text
                 };
                 m = Lekarz.wyszukajLekarzaPoAdresie(m);
                 if (m != null)
                 {
-                    txtNome.Text = m.ImieINazwisko;
-                    txtCpf.Text = m.Adres;
+                    tImieINazwisko.Text = m.ImieINazwisko;
+                    tAdres.Text = m.Adres;
                     txtEspecialidade.Text = m.Specjalizacja;
                 }
                 else
@@ -84,17 +84,17 @@ namespace ViewWPF.Views
             }
             else
             {
-                if (!string.IsNullOrEmpty(txtNome.Text))
+                if (!string.IsNullOrEmpty(tImieINazwisko.Text))
                 {
                     m = new Lekarze
                     {
-                        ImieINazwisko = txtNome.Text
+                        ImieINazwisko = tImieINazwisko.Text
                     };
                     m = Lekarz.wyszukajLekarzaPoImieniuINaziwsku(m);
                     if (m != null)
                     {
-                        txtNome.Text = m.ImieINazwisko;
-                        txtCpf.Text = m.Adres;
+                        tImieINazwisko.Text = m.ImieINazwisko;
+                        tAdres.Text = m.Adres;
                         txtEspecialidade.Text = m.Specjalizacja;
                     }
                 }
@@ -108,10 +108,10 @@ namespace ViewWPF.Views
 
         private void przyciskZmien_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtCpf.Text))
+            if (!string.IsNullOrEmpty(tImieINazwisko.Text) && !string.IsNullOrEmpty(tAdres.Text))
             {
-                m.ImieINazwisko = txtNome.Text;
-                m.Adres = txtCpf.Text;
+                m.ImieINazwisko = tImieINazwisko.Text;
+                m.Adres = tAdres.Text;
                 m.Specjalizacja = txtEspecialidade.Text;
 
                 if (Lekarz.zmienPacjenta(m))
@@ -134,10 +134,10 @@ namespace ViewWPF.Views
 
         public void wyczyscPola()
         {
-            txtNome.Clear();
-            txtCpf.Clear();
+            tImieINazwisko.Clear();
+            tAdres.Clear();
             txtEspecialidade.Clear();
-            txtNome.Focus();
+            tImieINazwisko.Focus();
         }
     }
 }

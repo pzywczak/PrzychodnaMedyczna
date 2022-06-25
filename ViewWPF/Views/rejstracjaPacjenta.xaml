@@ -6,6 +6,33 @@
         xmlns:local="clr-namespace:ViewWPF.Views"
         mc:Ignorable="d"
         Title="REJSTRACJA PACJENTA" Height="234.545" Width="355.909" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                               Visibility="Collapsed" Foreground="Gray" FontFamily="Arial"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -31,18 +58,20 @@
         <!--Labels-->
         
         <!--TextBoxs-->
-        <TextBox x:Name="txtNome" Grid.Row="0" Grid.Column="1" 
+        <TextBox x:Name="tImieINazwisko" Grid.Row="0" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="10,12,15,11" FontSize="12" Padding="5" TabIndex="0">
         </TextBox>
 
-        <TextBox x:Name="txtCpf" Grid.Row="1" Grid.Column="1" 
+        <TextBox x:Name="tAdres" Grid.Row="1" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="10,11,15,12" FontSize="12" Padding="5" TabIndex="1"/>
 
-        <TextBox x:Name="txtTelefone" Grid.Row="2" Grid.Column="1" 
+        <TextBox x:Name="tTelefon" Grid.Row="2" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                 Margin="10,12,15,11" FontSize="12" Padding="5" TabIndex="1"/>
+                 Margin="10,12,15,11" FontSize="12" Padding="5" TabIndex="1" 
+                 Style="{StaticResource MyWaterMarkStyle}" Tag="000-000-000"
+                 />
         <!--TextBoxs-->
         
         <!--Buttons-->

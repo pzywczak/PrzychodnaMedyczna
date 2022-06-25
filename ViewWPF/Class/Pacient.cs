@@ -69,5 +69,6 @@ namespace ViewWPF.Class
             int cont = ListaFiltrada.Count;
             return cont;
         }
+
     }
 }

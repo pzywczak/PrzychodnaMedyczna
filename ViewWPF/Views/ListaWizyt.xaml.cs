@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewWPF.Class;
 using ViewWPF.baza;
+using System.Data;
 
 namespace ViewWPF.Views
 {
@@ -28,6 +29,16 @@ namespace ViewWPF.Views
             MoiWizyty = Wizyta.listaWizyt();
             DataContext = this;
             dataGrid.Items.Refresh();
+        }
+
+        private void UsunWizyte_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Wizyty pacjentview in dataGrid.SelectedItems)
+            {
+                Wizyty pacjent = new Wizyty();
+                Wizyta.UsunWizyte(pacjent);
+            }
+            ;
         }
     }
 }
