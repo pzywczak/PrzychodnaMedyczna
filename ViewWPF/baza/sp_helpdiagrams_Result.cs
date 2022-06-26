@@ -10,17 +10,13 @@
 namespace ViewWPF.baza
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Wizyty
+    public partial class sp_helpdiagrams_Result
     {
-        public int Id { get; set; }
-        public string Data { get; set; }
-        public string Godzina { get; set; }
-        public string TypWizyty { get; set; }
-        public string ImieINazwiskoPacjenta { get; set; }
-        public int USERID { get; set; }
-    
-        public virtual Uzytkownicy Uzytkownicy { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

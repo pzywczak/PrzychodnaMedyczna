@@ -8,7 +8,7 @@ namespace ViewWPF
 {
     static class Program
     {
-        public static int Batatinha { get; set; }
+        public static int User { get; set; }
 
     }
 }

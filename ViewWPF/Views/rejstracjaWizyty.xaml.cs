@@ -34,6 +34,8 @@ namespace ViewWPF.Views
                     Data = tData.Text,
                     Godzina = tGodzina.Text,
                     TypWizyty = tTypWizyty.Text,
+                    ImieINazwiskoPacjenta = tImieINazwiskoPacjenta.Text,
+                    USERID = Program.User
                 };
                 if (Wizyta.zapiszWizyte(u))
                 {

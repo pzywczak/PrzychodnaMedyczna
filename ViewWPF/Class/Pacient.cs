@@ -9,7 +9,7 @@ namespace ViewWPF.Class
     class Pacient
     {
 
-        private static PrzychodniaLekarskaEntities3 ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities5 ctx = Singel.Instance.Context;
 
         public static bool zapiszPacjenta(Pacjenci pacjent)
         {
@@ -65,7 +65,7 @@ namespace ViewWPF.Class
         public static int Wynik()
         {
             List<Pacjenci> ListaFiltrada = new List<Pacjenci>();
-            ListaFiltrada = filtrListaPacjentow(Program.Batatinha);
+            ListaFiltrada = filtrListaPacjentow(Program.User);
             int cont = ListaFiltrada.Count;
             return cont;
         }

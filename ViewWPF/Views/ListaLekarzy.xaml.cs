@@ -26,7 +26,7 @@ namespace ViewWPF.Views
         public ListaLekarzy()
         {
             InitializeComponent();
-            MoiLekarze = Lekarz.filtrListaLekarzy(Program.Batatinha);
+            MoiLekarze = Lekarz.filtrListaLekarzy(Program.User);
             DataContext = this;
             dataGrid.Items.Refresh();
         }

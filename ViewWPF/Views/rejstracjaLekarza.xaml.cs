@@ -37,7 +37,7 @@ namespace ViewWPF.Views
                     ImieINazwisko = tImieINazwisko.Text,
                     Adres = tAdres.Text,
                     Specjalizacja = txtEspecialidade.Text,
-                    USERID = Program.Batatinha
+                    USERID = Program.User
                 };
                 if (Lekarz.zapiszLekarza(m))
                 {

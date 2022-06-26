@@ -19,6 +19,7 @@ namespace ViewWPF.baza
         {
             this.Lekarzes = new HashSet<Lekarze>();
             this.Pacjencis = new HashSet<Pacjenci>();
+            this.Wizyties = new HashSet<Wizyty>();
         }
     
         public int Id { get; set; }
@@ -29,5 +30,7 @@ namespace ViewWPF.baza
         public virtual ICollection<Lekarze> Lekarzes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pacjenci> Pacjencis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Wizyty> Wizyties { get; set; }
     }
 }

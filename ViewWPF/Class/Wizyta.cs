@@ -10,7 +10,7 @@ namespace ViewWPF.Class
 {
     class Wizyta
     {
-        private static PrzychodniaLekarskaEntities3 ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities5 ctx = Singel.Instance.Context;
 
         public List<Wizyty> CreateTable()
         {

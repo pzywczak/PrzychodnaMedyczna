@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewWPF.Views"
         mc:Ignorable="d"
-        Title="Przychodnia Medyczna" Height="326" Width="406" WindowStartupLocation="CenterScreen">
+        Title="Przychodnia Medyczna" Height="326" Width="408" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -30,6 +30,6 @@
         <Label x:Name="lListaLekarzy" Content="Lista lekarzy" Grid.Column="1" 
                HorizontalAlignment="Center" Margin="55,14,0,0" VerticalAlignment="Top" Height="37" Width="127"   />
         <Button x:Name="usunWizyte" Content="Usun Lekarza" HorizontalAlignment="Left" Margin="113,174,0,0" VerticalAlignment="Top" Click="usunWizyte_Click" Width="93" Height="27" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
-        <Button x:Name="listaWszystkichLekarzy" Content="WSZYSCY LEKARZE" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="228,0,0,0" VerticalAlignment="Top" Width="136" Grid.Column="1" Click="listaWszystkichLekarzy_Click"/>
+        <Button x:Name="listaWszystkichLekarzy" Content="WSZYSCY LEKARZE" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="28" Margin="228,0,0,0" VerticalAlignment="Top" Width="136" Grid.Column="1" Click="listaWszystkichLekarzy_Click"/>
     </Grid>
 </Window>

@@ -40,7 +40,7 @@ namespace ViewWPF.Views
                     ImieINazwisko = tImieINazwisko.Text,
                     Adres = tAdres.Text,
                     Telefon = tTelefon.Text,
-                    USERID = Program.Batatinha
+                    USERID = Program.User
                 };
                 if (Pacient.zapiszPacjenta(p))
                 {

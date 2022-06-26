@@ -22,7 +22,7 @@ namespace ViewWPF.Views
         {
             u = new Uzytkownicy();
             u = Uzytkownik.szukajUzytkownikaPoLoginu2(tLogin.Text);
-            Program.Batatinha = u.Id;
+            Program.User = u.Id;
 
             if (u != null && hasloSprawdz(u.Haslo))
             {

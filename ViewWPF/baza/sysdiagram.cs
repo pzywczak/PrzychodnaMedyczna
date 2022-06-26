@@ -12,15 +12,12 @@ namespace ViewWPF.baza
     using System;
     using System.Collections.Generic;
     
-    public partial class Wizyty
+    public partial class sysdiagram
     {
-        public int Id { get; set; }
-        public string Data { get; set; }
-        public string Godzina { get; set; }
-        public string TypWizyty { get; set; }
-        public string ImieINazwiskoPacjenta { get; set; }
-        public int USERID { get; set; }
-    
-        public virtual Uzytkownicy Uzytkownicy { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

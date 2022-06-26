@@ -28,6 +28,6 @@
             <PasswordBox x:Name="tHaslo"/>
             <Button x:Name="PrzyciskZaloguj" Content="Zaloguj sie" Click="PrzyciskZaloguj_Click" HorizontalAlignment="Right" Width="146"/>
         </StackPanel>
-        <Button x:Name="PrzyciskDodaj" Content="Dodaj Uzytkownika" Grid.Row="2" VerticalAlignment="Top" Click="PrzyciskDodaj_Click"/>
+        <Button x:Name="PrzyciskDodaj" Content="Dodaj Uzytkownika" Grid.Row="2" VerticalAlignment="Top" Click="PrzyciskDodaj_Click" Grid.ColumnSpan="2" Margin="0,0,116,0"/>
     </Grid>
 </Window>
