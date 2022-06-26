@@ -5,6 +5,9 @@ using ViewWPF.baza;
 
 namespace ViewWPF.Class
 {
+    /// <summary>
+    /// Klasa lekarz, odpowiedzialna za dodawanie,modyfikowanie lekarzy za pomoca listy
+    /// </summary>
     class Lekarz
     {
         private static PrzychodniaLekarskaEntities5 ctx = Singel.Instance.Context;

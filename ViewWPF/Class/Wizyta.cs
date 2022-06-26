@@ -8,6 +8,9 @@ using ViewWPF.baza;
 
 namespace ViewWPF.Class
 {
+    /// <summary>
+    /// Klasa wizyta, odpowiedzialna za dodawanie,modyfikowanie wizyt za pomoca listy
+    /// </summary>
     class Wizyta
     {
         private static PrzychodniaLekarskaEntities5 ctx = Singel.Instance.Context;

@@ -6,6 +6,9 @@ using ViewWPF.baza;
 
 namespace ViewWPF.Class
 {
+    /// <summary>
+    /// Klasa Pacient, odpowiedzialna za dodawanie,modyfikowanie pacientow za pomoca listy
+    /// </summary>
     class Pacient
     {
 

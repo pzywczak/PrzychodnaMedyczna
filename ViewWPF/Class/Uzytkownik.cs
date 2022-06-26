@@ -8,6 +8,9 @@ using ViewWPF.baza;
 
 namespace ViewWPF.Class
 {
+    /// <summary>
+    /// Klasa uzytkownik, odpowiedzialna za dodawanie,modyfikowanie uzytkownika za pomoca listy
+    /// </summary>
     class Uzytkownik
     {
         private static PrzychodniaLekarskaEntities5 ctx = Singel.Instance.Context;
