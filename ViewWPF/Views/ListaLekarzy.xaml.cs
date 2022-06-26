@@ -48,7 +48,8 @@ namespace ViewWPF.Views
         private void listaWszystkichLekarzy_Click(object sender, RoutedEventArgs e)
         {
             Close();
-           
+            WszyscyLekarze nowa = new WszyscyLekarze();
+            nowa.Show();
         }
     }
 }

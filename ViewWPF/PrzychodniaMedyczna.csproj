@@ -135,6 +135,12 @@
     <Compile Include="Views\rejstracjaWizyty.xaml.cs">
       <DependentUpon>rejstracjaWizyty.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WszyscyLekarze.xaml.cs">
+      <DependentUpon>WszyscyLekarze.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WszyscyPacjenci.xaml.cs">
+      <DependentUpon>WszyscyPacjenci.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\ListaWizyt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -192,6 +198,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\rejstracjaWizyty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WszyscyLekarze.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WszyscyPacjenci.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

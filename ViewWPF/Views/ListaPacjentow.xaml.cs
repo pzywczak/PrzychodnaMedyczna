@@ -45,5 +45,12 @@ namespace ViewWPF.Views
             ListaPacjentow nowa = new ListaPacjentow();
             nowa.Show();
         }
+
+        private void listaWszystkichPacjentow_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+            WszyscyPacjenci nowa = new WszyscyPacjenci();
+            nowa.Show();
+        }
     }
 }
