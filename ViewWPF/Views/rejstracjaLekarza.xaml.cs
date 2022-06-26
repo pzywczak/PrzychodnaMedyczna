@@ -62,7 +62,7 @@ namespace ViewWPF.Views
         {
             przyciskDodaj.IsEnabled = false;
             przyciskSzukaj.IsEnabled = true;
-
+            przyciskZmien.IsEnabled = true;
             if (!string.IsNullOrEmpty(tAdres.Text))
             {
                 m = new Lekarze
