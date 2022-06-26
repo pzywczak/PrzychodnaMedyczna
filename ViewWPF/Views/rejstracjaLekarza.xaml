@@ -39,7 +39,7 @@
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="1" Height="27"/>
 
-        <TextBox x:Name="txtEspecialidade" Grid.Row="2" Grid.Column="1" 
+        <TextBox x:Name="tSpecjalizacja" Grid.Row="2" Grid.Column="1" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="0" Height="28"/>
         <!--TextBoxs-->
