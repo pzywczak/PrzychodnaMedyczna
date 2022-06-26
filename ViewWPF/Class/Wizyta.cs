@@ -10,7 +10,13 @@ namespace ViewWPF.Class
 {
     class Wizyta
     {
-        private static PrzychodniaLekarskaEntities2 ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities3 ctx = Singel.Instance.Context;
+
+        public List<Wizyty> CreateTable()
+        {
+            var list = ctx.Wizyties.ToList();
+            return list;
+        }
 
         public static bool zapiszWizyte(Wizyty pacjent)
         {
@@ -48,9 +54,17 @@ namespace ViewWPF.Class
             return ctx.Wizyties.ToList();
         }
 
-        public static void UsunWizyte(Wizyty pacjent)
+
+        public void UsunWiersz(Wizyty wizyta)
         {
-            ctx.Wizyties.Remove(pacjent);
+            var Query = (from ctx in ctx.Wizyties where ctx.Id == wizyta.Id select ctx).ToList();
+            foreach (var row in Query)
+            {
+                ctx.Wizyties.Remove(row);
+                ctx.SaveChanges();
+            }
         }
+
+
     }
 }

@@ -22,13 +22,33 @@ namespace ViewWPF.Views
     public partial class ListaLekarzy : Window
     {
         public List<Lekarze> MoiLekarze { get; set; }
-
+        Lekarz klasa = new Lekarz();
         public ListaLekarzy()
         {
             InitializeComponent();
             MoiLekarze = Lekarz.filtrListaLekarzy(Program.Batatinha);
             DataContext = this;
             dataGrid.Items.Refresh();
+        }
+
+        private void usunWizyte_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Lekarze wizytaview in dataGrid.SelectedItems)
+            {
+                Lekarze lekarz = new Lekarze();
+                lekarz.Id = wizytaview.Id;
+                klasa.UsunWiersz(lekarz);
+
+            }
+            Close();
+            ListaLekarzy nowa = new ListaLekarzy();
+            nowa.Show();
+        }
+
+        private void listaWszystkichLekarzy_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+           
         }
     }
 }

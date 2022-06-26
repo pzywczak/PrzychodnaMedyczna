@@ -18,8 +18,5 @@ namespace ViewWPF.baza
         public string Data { get; set; }
         public string Godzina { get; set; }
         public string TypWizyty { get; set; }
-        public string CzyOdbyta { get; set; }
-        public Nullable<int> Id_pacjenta { get; set; }
-        public Nullable<int> Id_lekarza { get; set; }
     }
 }

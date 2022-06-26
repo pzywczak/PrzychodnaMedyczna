@@ -60,40 +60,35 @@
         <!--TextBoxs-->
 
 
-        
+
         <TextBox x:Name="tGodzina" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="1" Height="27" 
               Style="{StaticResource MyWaterMarkStyle}" Tag="00:00"
                  />
-        
+
 
         <TextBox x:Name="tTypWizyty" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
                  Margin="0,0,15,0" FontSize="12" Padding="5" TabIndex="0" Height="28"
                  Style="{StaticResource MyWaterMarkStyle}" Tag="Kontrolna / Zabieg"
                  />
-
-        <TextBox x:Name="tID" Grid.Column="1" VerticalAlignment="Top"
-                 Margin="0,54,208,0" FontSize="12" Padding="5" TabIndex="1" Height="27" Grid.Row="2" Grid.RowSpan="2"/>
         <!--TextBoxs-->
 
         <!--Buttons-->
         <Button x:Name="przyciskDodaj" Content="Dodaj" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Top" FontSize="12" Padding="5" 
-                TabIndex="2" Margin="0,31,0,0" Height="30" Width="55" Click="przyciskDodaj_Click"/>
+                TabIndex="2" Margin="0,21,0,0" Height="30" Width="55" Click="przyciskDodaj_Click"/>
 
         <Button x:Name="przyciskEdytuj" Content="Edytuj" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" IsEnabled="False"
                 VerticalAlignment="Top" FontSize="12" Padding="5" 
-                Margin="92,31,0,0" TabIndex="3" Height="30" Width="55" Click="przyciskEdytuj_Click"/>
+                Margin="81,21,0,0" TabIndex="3" Height="30" Width="55" Click="przyciskEdytuj_Click"/>
 
         <Button x:Name="przyciskUsun" Content="Usun" Grid.Row="3" 
                 Grid.Column="1" HorizontalAlignment="Left" 
                 VerticalAlignment="Top" FontSize="12" Padding="5" 
-                Margin="177,31,0,0" TabIndex="3"
+                Margin="161,21,0,0" TabIndex="3"
                 IsEnabled="False" Height="30" Width="55" Click="przyciskUsun_Click"/>
-        <Label x:Name="lData_Copy" Content="ID Wizyty:" Grid.Row="2" Grid.Column="0" 
-            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,55,10,0" Height="27" Width="69" Grid.RowSpan="2"/>
         <DatePicker x:Name="tData" HorizontalAlignment="Left" Margin="100,20,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <!--Buttons-->
 

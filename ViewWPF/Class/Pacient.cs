@@ -9,7 +9,7 @@ namespace ViewWPF.Class
     class Pacient
     {
 
-        private static PrzychodniaLekarskaEntities2 ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities3 ctx = Singel.Instance.Context;
 
         public static bool zapiszPacjenta(Pacjenci pacjent)
         {
@@ -68,6 +68,15 @@ namespace ViewWPF.Class
             ListaFiltrada = filtrListaPacjentow(Program.Batatinha);
             int cont = ListaFiltrada.Count;
             return cont;
+        }
+        public void UsunWiersz(Pacjenci pacient)
+        {
+            var Query = (from ctx in ctx.Pacjencis where ctx.Id == pacient.Id select ctx).ToList();
+            foreach (var row in Query)
+            {
+                ctx.Pacjencis.Remove(row);
+                ctx.SaveChanges();
+            }
         }
 
     }

@@ -22,6 +22,7 @@ namespace ViewWPF.Views
     public partial class ListaPacjentow : Window
     {
         public List<Pacjenci> MoiPacjenci { get; set; }
+        Pacient dbclass = new Pacient();
 
         public ListaPacjentow()
         {
@@ -31,6 +32,18 @@ namespace ViewWPF.Views
             dataGrid.Items.Refresh();
         }
 
+        private void usunPacjenta_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Pacjenci wizytaview in dataGrid.SelectedItems)
+            {
+                Pacjenci wizyta = new Pacjenci();
+                wizyta.Id = wizytaview.Id;
+                dbclass.UsunWiersz(wizyta);
 
+            }
+            Close();
+            ListaPacjentow nowa = new ListaPacjentow();
+            nowa.Show();
+        }
     }
 }

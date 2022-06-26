@@ -13,7 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewWPF.Class;
 using ViewWPF.baza;
-using System.Data;
+
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace ViewWPF.Views
 {
@@ -22,6 +25,9 @@ namespace ViewWPF.Views
     /// </summary>
     public partial class ListaWizyt : Window
     {
+        Wizyta dbclass = new Wizyta();
+        
+ 
         public List<Wizyty> MoiWizyty { get; set; }
         public ListaWizyt()
         {
@@ -31,14 +37,21 @@ namespace ViewWPF.Views
             dataGrid.Items.Refresh();
         }
 
-        private void UsunWizyte_Click(object sender, RoutedEventArgs e)
+        private void usunWizyte_Click(object sender, RoutedEventArgs e)
         {
-            foreach (Wizyty pacjentview in dataGrid.SelectedItems)
+            foreach (Wizyty wizytaview in dataGrid.SelectedItems)
             {
-                Wizyty pacjent = new Wizyty();
-                Wizyta.UsunWizyte(pacjent);
+                Wizyty wizyta = new Wizyty();
+                wizyta.Id = wizytaview.Id;
+                dbclass.UsunWiersz(wizyta);
+                
             }
-            ;
+            Close();
+            ListaWizyt nowa = new ListaWizyt();
+            nowa.Show();
         }
+
+
+
     }
 }

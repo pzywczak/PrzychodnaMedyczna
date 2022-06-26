@@ -10,7 +10,7 @@ namespace ViewWPF.Class
 {
     class Uzytkownik
     {
-        private static PrzychodniaLekarskaEntities2 ctx = Singel.Instance.Context;
+        private static PrzychodniaLekarskaEntities3 ctx = Singel.Instance.Context;
 
         public static bool zapiszUzytkownika(Uzytkownicy uzytkownik)
         {
