@@ -7,7 +7,7 @@
     {
         public override void Up()
         {
-
+            
             
             CreateTable(
                 "dbo.Lekarze",

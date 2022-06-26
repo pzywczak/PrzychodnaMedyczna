@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for GlowneMenu.xaml
+    /// Logika dzialania GlowneMenu.xaml
     /// </summary>
     public partial class GlowneMenu : Window
     {

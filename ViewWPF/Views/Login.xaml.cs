@@ -7,7 +7,7 @@ using ViewWPF.baza;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Logika dzialania Login.xaml
     /// </summary>
     public partial class Login : Window
     {

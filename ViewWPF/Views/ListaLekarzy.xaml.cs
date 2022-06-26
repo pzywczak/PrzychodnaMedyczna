@@ -17,7 +17,7 @@ using ViewWPF.baza;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for ListaLekarzy.xaml
+    /// Logika dzialania ListaLekarzy.xaml
     /// </summary>
     public partial class ListaLekarzy : Window
     {

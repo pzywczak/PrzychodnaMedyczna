@@ -67,23 +67,23 @@ namespace ViewWPF.Class
 
         public static List<Lekarze> filtrListaLekarzy(int id)
         {
-            List<Lekarze> ListaFiltrada = new List<Lekarze>();
+            List<Lekarze> ListaFiltrowana = new List<Lekarze>();
 
-            foreach (Lekarze medicoTestado in ctx.Lekarzes.ToList())
+            foreach (Lekarze Lekarzid in ctx.Lekarzes.ToList())
             {
-                if (medicoTestado.USERID.Equals(id))
+                if (Lekarzid.USERID.Equals(id))
                 {
-                    ListaFiltrada.Add(medicoTestado);
+                    ListaFiltrowana.Add(Lekarzid);
                 }
             }
-            return ListaFiltrada;
+            return ListaFiltrowana;
         }
 
         public static int Wynik()
         {
-            List<Lekarze> ListaFiltrada = new List<Lekarze>();
-            ListaFiltrada = filtrListaLekarzy(Program.User);
-            int cont = ListaFiltrada.Count;
+            List<Lekarze> ListaFiltrowana = new List<Lekarze>();
+            ListaFiltrowana = filtrListaLekarzy(Program.User);
+            int cont = ListaFiltrowana.Count;
             return cont;
         }
         public void UsunWiersz(Lekarze pacient)

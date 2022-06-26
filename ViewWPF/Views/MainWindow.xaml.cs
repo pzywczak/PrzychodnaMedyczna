@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace ViewWPF.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika dzialania MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {

@@ -34,11 +34,11 @@ namespace ViewWPF.Class
             
         }
 
-        public static bool zmienWizyte(Wizyty pacjent)
+        public static bool zmienWizyte(Wizyty wizyta)
         {
             try
             {
-                ctx.Entry(pacjent).State = System.Data.Entity.EntityState.Modified;
+                ctx.Entry(wizyta).State = System.Data.Entity.EntityState.Modified;
                 ctx.SaveChanges();
                 return true;
             }

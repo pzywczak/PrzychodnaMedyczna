@@ -36,7 +36,7 @@ namespace ViewWPF.Views
                 {
                     ImieINazwisko = tImieINazwisko.Text,
                     Adres = tAdres.Text,
-                    Specjalizacja = txtEspecialidade.Text,
+                    Specjalizacja = tSpecjalizacja.Text,
                     USERID = Program.User
                 };
                 if (Lekarz.zapiszLekarza(m))
@@ -74,7 +74,7 @@ namespace ViewWPF.Views
                 {
                     tImieINazwisko.Text = m.ImieINazwisko;
                     tAdres.Text = m.Adres;
-                    txtEspecialidade.Text = m.Specjalizacja;
+                    tSpecjalizacja.Text = m.Specjalizacja;
                 }
                 else
                 {
@@ -95,7 +95,7 @@ namespace ViewWPF.Views
                     {
                         tImieINazwisko.Text = m.ImieINazwisko;
                         tAdres.Text = m.Adres;
-                        txtEspecialidade.Text = m.Specjalizacja;
+                        tSpecjalizacja.Text = m.Specjalizacja;
                     }
                 }
                 else
@@ -112,7 +112,7 @@ namespace ViewWPF.Views
             {
                 m.ImieINazwisko = tImieINazwisko.Text;
                 m.Adres = tAdres.Text;
-                m.Specjalizacja = txtEspecialidade.Text;
+                m.Specjalizacja = tSpecjalizacja.Text;
 
                 if (Lekarz.zmienPacjenta(m))
                 {
@@ -136,7 +136,7 @@ namespace ViewWPF.Views
         {
             tImieINazwisko.Clear();
             tAdres.Clear();
-            txtEspecialidade.Clear();
+            tSpecjalizacja.Clear();
             tImieINazwisko.Focus();
         }
     }

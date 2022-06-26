@@ -64,9 +64,9 @@ namespace ViewWPF.Class
 
         public static int Wynik()
         {
-            List<Pacjenci> ListaFiltrada = new List<Pacjenci>();
-            ListaFiltrada = filtrListaPacjentow(Program.User);
-            int cont = ListaFiltrada.Count;
+            List<Pacjenci> ListaFiltrowana = new List<Pacjenci>();
+            ListaFiltrowana = filtrListaPacjentow(Program.User);
+            int cont = ListaFiltrowana.Count;
             return cont;
         }
         public void UsunWiersz(Pacjenci pacient)

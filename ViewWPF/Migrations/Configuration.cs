@@ -10,6 +10,7 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+           
         }
 
         protected override void Seed(ViewWPF.baza.model2 context)
