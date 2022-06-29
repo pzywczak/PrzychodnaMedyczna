@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32516.85
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrzychodniaMedyczna", "ViewWPF\PrzychodniaMedyczna.csproj", "{B6F622AC-5F6F-4442-B46F-26A4401A034C}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{60A49877-304C-4EE1-9DB8-BAA61B6ECA17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +15,6 @@ Global
 		{B6F622AC-5F6F-4442-B46F-26A4401A034C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6F622AC-5F6F-4442-B46F-26A4401A034C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6F622AC-5F6F-4442-B46F-26A4401A034C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60A49877-304C-4EE1-9DB8-BAA61B6ECA17}.Debug|Any CPU.ActiveCfg = Debug
-		{60A49877-304C-4EE1-9DB8-BAA61B6ECA17}.Release|Any CPU.ActiveCfg = Release
-		{60A49877-304C-4EE1-9DB8-BAA61B6ECA17}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
